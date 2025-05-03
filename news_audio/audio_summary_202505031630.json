@@ -1,0 +1,26 @@
+{
+  "timestamp": "2025-05-03T16:30:04.828530",
+  "count": 5,
+  "articles": [
+    {
+      "title": "Gaza death toll surges to 52,495 with 70 killed in past 2 days",
+      "audio_path": "news_audio\\Gaza_death_toll_surges_to_52_495_with_70_killed_in_past_2_days_202505031628.mp3"
+    },
+    {
+      "title": "Pakistan successfully tests launch of short-range Abdali ballistic missile",
+      "audio_path": "news_audio\\Pakistan_successfully_tests_launch_of_short_range_Abdali_ballistic_missile_202505031629.mp3"
+    },
+    {
+      "title": "Pakistan successfully tests launch of short-range Abdali ballistic missile",
+      "audio_path": "news_audio\\Pakistan_successfully_tests_launch_of_short_range_Abdali_ballistic_missile_202505031629.mp3"
+    },
+    {
+      "title": "Gaza death toll surges to 52,495 with 70 killed in past 2 days",
+      "audio_path": "news_audio\\Gaza_death_toll_surges_to_52_495_with_70_killed_in_past_2_days_202505031629.mp3"
+    },
+    {
+      "title": "Security forces kill 5 terrorists, arrest 2 in KP operations: ISPR",
+      "audio_path": "news_audio\\Security_forces_kill_5_terrorists__arrest_2_in_KP_operations__ISPR_202505031630.mp3"
+    }
+  ]
+}

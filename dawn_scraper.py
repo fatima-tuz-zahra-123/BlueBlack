@@ -6,6 +6,7 @@ import datetime
 import time
 import schedule
 import logging
+import argparse
 
 # Set up logging
 logging.basicConfig(
@@ -256,5 +257,16 @@ def schedule_scraping():
         time.sleep(60)  # Wait one minute between checks
 
 if __name__ == "__main__":
+    # Parse command line arguments
+    parser = argparse.ArgumentParser(description='Dawn News Scraper')
+    parser.add_argument('--single-run', action='store_true', help='Run the scraper once and exit')
+    args = parser.parse_args()
+    
     logger.info("Dawn News Scraper initialized")
-    schedule_scraping()
+    
+    if args.single_run:
+        # Run once and exit
+        scrape_dawn_news()
+    else:
+        # Run on schedule
+        schedule_scraping()

@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-05-03T15:19:05.172363",
+  "timestamp": "2025-05-03T16:55:11.761969",
   "articles_count": 5,
   "articles": [
     {
@@ -7,20 +7,20 @@
       "url": "https://www.dawn.com/gaza-journalists-killed/"
     },
     {
-      "title": "Pakistan successfully tests launch of short-range Abdali ballistic missile",
-      "url": "https://www.dawn.com/news/1908176/pakistan-successfully-tests-launch-of-short-range-abdali-ballistic-missile"
-    },
-    {
       "title": "Pakistan envoy to US calls on world to resolve Kashmir dispute, terms it \u2018core issue\u2019 of enmity with India",
       "url": "https://www.dawn.com/news/1908173/pakistan-envoy-to-us-calls-on-world-to-resolve-kashmir-dispute-terms-it-core-issue-of-enmity-with-india"
     },
     {
-      "title": "Security forces kill 5 terrorists, arrest 2 in KP operations: ISPR",
-      "url": "https://www.dawn.com/news/1908178/security-forces-kill-5-terrorists-arrest-2-in-kp-operations-ispr"
+      "title": "Pakistan successfully tests launch of short-range Abdali ballistic missile",
+      "url": "https://www.dawn.com/news/1908176/pakistan-successfully-tests-launch-of-short-range-abdali-ballistic-missile"
     },
     {
-      "title": "Children among 11 killed in Israel strike: Gaza civil defence",
+      "title": "Gaza death toll surges to 52,495 with 70 killed in past 2 days",
       "url": "https://www.dawn.com/live/gaza-invasion"
+    },
+    {
+      "title": "Security forces kill 5 terrorists, arrest 2 in KP operations: ISPR",
+      "url": "https://www.dawn.com/news/1908178/security-forces-kill-5-terrorists-arrest-2-in-kp-operations-ispr"
     }
   ]
 }
