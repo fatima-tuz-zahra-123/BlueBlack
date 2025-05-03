@@ -1,0 +1,27 @@
+{
+  "timestamp": "2025-05-03T23:40:30.977722",
+  "count": 5,
+  "voice": "Matthew",
+  "articles": [
+    {
+      "title": "Gaza journalists killed banner",
+      "audio_path": "news_audio\\Gaza_journalists_killed_banner_202505032340.mp3"
+    },
+    {
+      "title": "Pakistan reacted responsibly despite India\u2019s provocative actions: PM Shehbaz",
+      "audio_path": "news_audio\\Pakistan_reacted_responsibly_despite_India_s_provocative_actions__PM_Shehbaz_202505032340.mp3"
+    },
+    {
+      "title": "Three babies among 11 killed in Israel attack on Khan Younis",
+      "audio_path": "news_audio\\Three_babies_among_11_killed_in_Israel_attack_on_Khan_Younis_202505032340.mp3"
+    },
+    {
+      "title": "Pakistan reacted responsibly despite India\u2019s provocative actions: PM Shehbaz",
+      "audio_path": "news_audio\\Pakistan_reacted_responsibly_despite_India_s_provocative_actions__PM_Shehbaz_202505032340.mp3"
+    },
+    {
+      "title": "Zelensky says won\u2019t play Putin\u2019s \u2018games\u2019 with short truce",
+      "audio_path": "news_audio\\Zelensky_says_won_t_play_Putin_s__games__with_short_truce_202505032340.mp3"
+    }
+  ]
+}
