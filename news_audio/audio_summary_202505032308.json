@@ -1,0 +1,27 @@
+{
+  "timestamp": "2025-05-03T23:08:40.450418",
+  "count": 5,
+  "voice": "Emma",
+  "articles": [
+    {
+      "title": "Gaza journalists killed banner",
+      "audio_path": "news_audio\\Gaza_journalists_killed_banner_202505032308.mp3"
+    },
+    {
+      "title": "India bans all imports from Pakistan, suspends inbound mail as tensions grow",
+      "audio_path": "news_audio\\India_bans_all_imports_from_Pakistan__suspends_inbound_mail_as_tensions_grow_202505032308.mp3"
+    },
+    {
+      "title": "Three babies among 11 killed in Israel attack on Khan Younis",
+      "audio_path": "news_audio\\Three_babies_among_11_killed_in_Israel_attack_on_Khan_Younis_202505032308.mp3"
+    },
+    {
+      "title": "India bans all imports from Pakistan, suspends inbound mail as tensions grow",
+      "audio_path": "news_audio\\India_bans_all_imports_from_Pakistan__suspends_inbound_mail_as_tensions_grow_202505032308.mp3"
+    },
+    {
+      "title": "India bans all imports from Pakistan, suspends inbound mail as tensions grow",
+      "audio_path": "news_audio\\India_bans_all_imports_from_Pakistan__suspends_inbound_mail_as_tensions_grow_202505032308.mp3"
+    }
+  ]
+}

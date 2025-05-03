@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dawn AI News Anchor</title>
+    <title>Dawn AI News Reader</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,24 +11,24 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary-color: #0d6efd;
-            --secondary-color: #1e3c72;
-            --dark-color: #121212;
+            --primary-color: #063970;
+            --secondary-color: #1e3a5f;
+            --accent-color: #ff9e2c;
             --light-color: #f8f9fa;
-            --accent-color: #dc3545;
+            --dark-color: #222831;
             --text-color: #333;
-            --text-light: #f8f9fa;
-            --shadow-sm: 0 2px 10px rgba(0,0,0,0.1);
-            --shadow-md: 0 5px 15px rgba(0,0,0,0.15);
+            --card-bg: #fff;
+            --shadow-sm: 0 2px 8px rgba(0,0,0,0.08);
+            --shadow-md: 0 5px 15px rgba(0,0,0,0.1);
             --transition: all 0.3s ease;
         }
 
         body {
             font-family: 'Roboto', sans-serif;
-            background-color: var(--light-color);
+            background-color: #f0f2f5;
             color: var(--text-color);
             line-height: 1.6;
-            padding-top: 64px;
+            padding-top: 70px;
         }
 
         h1, h2, h3, h4, h5, h6 {
@@ -38,12 +38,13 @@
 
         /* Navbar Styling */
         .navbar {
-            background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+            background: var(--primary-color);
             box-shadow: var(--shadow-md);
             position: fixed;
             top: 0;
             width: 100%;
             z-index: 1030;
+            padding: 15px 0;
         }
 
         .navbar-brand {
@@ -51,171 +52,45 @@
             font-weight: 700;
             font-size: 1.8rem;
             text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-            letter-spacing: -0.5px;
+            display: flex;
+            align-items: center;
         }
         
-        /* Studio Layout */
-        .studio-container {
-            padding: 30px 0;
-            margin-bottom: 20px;
-        }
-
-        .avatar-container {
-            position: relative;
-            width: 100%;
-            height: 400px;
-            background-color: var(--dark-color);
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: var(--shadow-md);
-            margin-bottom: 40px;
-        }
-
-        .avatar-placeholder {
-            width: 100%;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            color: white;
-            background: linear-gradient(135deg, #1e3c72, #2a5298);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .avatar-placeholder::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="2"/></svg>') repeat;
-            opacity: 0.3;
-        }
-
-        .avatar-content {
-            z-index: 2;
-            text-align: center;
-            padding: 20px;
-        }
-
-        .avatar-logo {
-            font-size: 3rem;
-            font-weight: bold;
-            font-family: 'Playfair Display', serif;
-            margin-bottom: 15px;
-            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
-        }
-
-        .avatar-caption {
-            font-size: 1.2rem;
-            max-width: 600px;
-            opacity: 0.9;
-        }
-
-        .news-ticker {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            background: rgba(0, 0, 0, 0.7);
-            color: white;
-            padding: 12px 0;
-            overflow: hidden;
-        }
-
-        .ticker-content {
-            display: flex;
-            white-space: nowrap;
-            animation: ticker 35s linear infinite;
-        }
-
-        @keyframes ticker {
-            0% { transform: translateX(100%); }
-            100% { transform: translateX(-100%); }
-        }
-
-        .ticker-item {
-            display: inline-block;
-            margin-right: 40px;
-            font-weight: 500;
-        }
-
-        .ticker-item strong {
+        .navbar-brand i {
             color: var(--accent-color);
-            margin-right: 6px;
-        }
-
-        /* Live Indicator */
-        .news-live {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            background-color: var(--accent-color);
-            color: white;
-            padding: 5px 15px;
-            border-radius: 20px;
-            font-weight: 700;
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            display: flex;
-            align-items: center;
-            box-shadow: 0 3px 10px rgba(220, 53, 69, 0.3);
-            z-index: 5;
-        }
-
-        .live-dot {
-            width: 12px;
-            height: 12px;
-            background-color: #fff;
-            border-radius: 50%;
-            margin-right: 8px;
-            animation: blink 1.5s infinite;
-        }
-
-        @keyframes blink {
-            0% { opacity: 1; }
-            50% { opacity: 0.3; }
-            100% { opacity: 1; }
+            margin-right: 10px;
         }
 
         /* News Cards */
         .news-container {
-            max-width: 1200px;
+            max-width: 1100px;
             margin: 0 auto;
+            padding: 20px 15px;
         }
 
         .news-header {
-            margin-bottom: 30px;
-            border-bottom: 2px solid var(--primary-color);
-            padding-bottom: 10px;
+            margin-bottom: 25px;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
-
+        
         .news-header h2 {
-            font-size: 2rem;
             margin: 0;
-            color: var(--secondary-color);
-        }
-
-        .latest-update {
-            font-size: 0.9rem;
-            color: #6c757d;
-            font-style: italic;
+            padding: 0;
+            color: var(--primary-color);
+            border-left: 5px solid var(--accent-color);
+            padding-left: 15px;
         }
 
         .news-card {
-            margin-bottom: 30px;
             border-radius: 12px;
             overflow: hidden;
-            background-color: #fff;
             box-shadow: var(--shadow-sm);
-            transition: transform 0.3s, box-shadow 0.3s;
-            border: 1px solid rgba(0,0,0,0.08);
+            transition: var(--transition);
+            margin-bottom: 25px;
+            background-color: var(--card-bg);
+            border: none;
         }
 
         .news-card:hover {
@@ -223,371 +98,259 @@
             box-shadow: var(--shadow-md);
         }
 
-        .news-card-header {
-            background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
-            padding: 15px 20px;
-            color: white;
-        }
-
-        .news-card-header h3 {
-            margin: 0;
-            font-size: 1.5rem;
-        }
-
         .news-card-body {
-            padding: 20px;
+            padding: 25px;
         }
 
-        .news-timestamp {
+        .news-card-title {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            font-weight: 700;
+            color: var(--primary-color);
+            line-height: 1.3;
+        }
+
+        .news-meta {
+            font-size: 0.85rem;
+            color: #6c757d;
+            margin-bottom: 15px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .news-meta i {
+            margin-right: 5px;
+            color: var(--accent-color);
+        }
+
+        .news-meta span {
+            margin-right: 15px;
+            margin-bottom: 5px;
             display: flex;
             align-items: center;
-            color: #6c757d;
-            font-size: 0.9rem;
-            margin-bottom: 15px;
         }
 
-        .news-timestamp i {
-            margin-right: 6px;
-        }
-
-        .news-image {
-            width: 100%;
-            height: 220px;
-            object-fit: cover;
-            border-radius: 8px;
-            transition: var(--transition);
-        }
-
-        .news-content-wrapper {
-            padding: 15px 0;
-        }
-
-        .news-script {
+        .news-text {
             margin-bottom: 20px;
-            line-height: 1.7;
             font-size: 1rem;
-            color: #495057;
-        }
-
-        .audio-card {
-            background-color: #f8f9fa;
-            border-radius: 8px;
-            padding: 15px;
-            margin-top: 20px;
+            line-height: 1.7;
+            color: #555;
         }
 
         .audio-player {
+            background-color: rgba(6, 57, 112, 0.05);
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 15px;
+            border: 1px solid #e3e3e3;
+        }
+
+        .audio-player audio {
             width: 100%;
-            margin: 10px 0;
+            height: 40px;
         }
 
-        .audio-label {
-            display: block;
-            font-weight: 500;
-            margin-bottom: 10px;
-            color: var(--secondary-color);
+        /* Control Panel */
+        .control-panel {
+            padding: 25px;
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: var(--shadow-sm);
+            margin-bottom: 25px;
+            border-top: 4px solid var(--accent-color);
         }
 
-        /* Loading States */
-        .loading {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            padding: 60px 0;
-            text-align: center;
-        }
-
-        .loading .spinner-border {
-            width: 3rem;
-            height: 3rem;
+        .voice-selector-title {
             margin-bottom: 15px;
-        }
-
-        .loading p {
-            font-size: 1.2rem;
-            color: #6c757d;
-        }
-
-        /* Action Buttons */
-        .action-button {
-            position: fixed;
-            border: none;
-            box-shadow: var(--shadow-md);
-            z-index: 1000;
+            color: var(--primary-color);
             display: flex;
             align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            transition: var(--transition);
         }
-
-        #refreshBtn {
-            bottom: 20px;
-            right: 20px;
-            background-color: var(--primary-color);
-            color: white;
-            border-radius: 50%;
-            width: 56px;
-            height: 56px;
-            font-size: 24px;
-        }
-
-        #refreshBtn:hover {
-            transform: rotate(180deg);
-            background-color: #0b5ed7;
-        }
-
-        #updateNewsBtn {
-            bottom: 20px;
-            left: 20px;
-            background-color: #198754;
-            color: white;
-            border-radius: 28px;
-            padding: 10px 20px;
-            font-weight: 500;
-            box-shadow: 0 4px 12px rgba(25,135,84,0.3);
-        }
-
-        #updateNewsBtn:hover {
-            background-color: #157347;
-            transform: scale(1.05);
-        }
-
-        #updateNewsBtn:disabled {
-            background-color: #6c757d;
-            cursor: not-allowed;
-            transform: none;
-        }
-
-        #updateNewsBtn .spinner-border {
-            width: 1rem;
-            height: 1rem;
+        
+        .voice-selector-title i {
             margin-right: 8px;
-            display: none;
+            color: var(--accent-color);
         }
 
-        .btn-updating .spinner-border {
-            display: inline-block !important;
-        }
-
-        /* Footer */
-        .footer {
-            background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
-            color: white;
-            padding: 30px 0 20px;
-            margin-top: 100px;
-        }
-
-        .footer-content {
+        .voice-options {
             display: flex;
             flex-wrap: wrap;
-            justify-content: space-between;
-        }
-
-        .footer-brand {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.8rem;
-            font-weight: 700;
-            margin-bottom: 10px;
-        }
-
-        .footer-info {
-            max-width: 400px;
+            gap: 10px;
+            margin-top: 15px;
             margin-bottom: 20px;
         }
 
-        .footer-links h5 {
-            margin-bottom: 15px;
-            font-size: 1.2rem;
+        .voice-option {
+            padding: 10px 18px;
+            border-radius: 30px;
+            background-color: #f0f2f5;
+            cursor: pointer;
+            transition: var(--transition);
+            font-size: 0.95rem;
+            border: 1px solid #e3e3e3;
+            display: flex;
+            align-items: center;
         }
 
-        .footer-links ul {
-            list-style: none;
-            padding: 0;
+        .voice-option:hover {
+            background-color: #e0e7ff;
+            border-color: #c7d2fe;
         }
 
-        .footer-links li {
-            margin-bottom: 8px;
-        }
-
-        .footer-links a {
-            color: rgba(255,255,255,0.8);
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-
-        .footer-links a:hover {
-            color: #fff;
-            text-decoration: underline;
-        }
-
-        .footer-bottom {
-            border-top: 1px solid rgba(255,255,255,0.1);
-            padding-top: 20px;
-            margin-top: 20px;
-            font-size: 0.9rem;
-            color: rgba(255,255,255,0.7);
-        }
-
-        /* Alert Styles */
-        .custom-alert {
-            border-radius: 8px;
-            padding: 15px 20px;
-            margin-bottom: 20px;
-            border-left: 5px solid;
-            animation: fadeIn 0.5s;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(-20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        .alert-success {
-            background-color: #d1e7dd;
-            color: #0f5132;
-            border-left-color: #198754;
-        }
-
-        .alert-info {
-            background-color: #cff4fc;
-            color: #055160;
-            border-left-color: #0dcaf0;
-        }
-
-        .alert-danger {
-            background-color: #f8d7da;
-            color: #842029;
-            border-left-color: #dc3545;
-        }
-
-        /* Responsive Styles */
-        @media (max-width: 768px) {
-            .avatar-container {
-                height: 300px;
-            }
-            
-            .avatar-logo {
-                font-size: 2.4rem;
-            }
-            
-            .avatar-caption {
-                font-size: 1rem;
-            }
-            
-            .action-button {
-                transform: scale(0.9);
-            }
-            
-            .news-card-header h3 {
-                font-size: 1.3rem;
-            }
-            
-            .news-image {
-                height: 180px;
-            }
-            
-            .footer-content > div {
-                flex-basis: 100%;
-                margin-bottom: 30px;
-            }
-        }
-
-        @media (max-width: 576px) {
-            .avatar-container {
-                height: 250px;
-            }
-            
-            #updateNewsBtn {
-                padding: 8px 16px;
-                font-size: 14px;
-                left: 10px;
-            }
-            
-            #refreshBtn {
-                width: 48px;
-                height: 48px;
-                font-size: 20px;
-                right: 10px;
-            }
-            
-            .news-card-body {
-                padding: 15px;
-            }
-        }
-
-        /* Currently Playing State */
-        .currently-playing {
-            border: 2px solid var(--primary-color);
-            position: relative;
-        }
-
-        .currently-playing::before {
-            content: 'Now Playing';
-            position: absolute;
-            top: -10px;
-            right: 20px;
+        .voice-option.active {
             background-color: var(--primary-color);
             color: white;
-            padding: 2px 10px;
-            border-radius: 10px;
-            font-size: 0.7rem;
-            font-weight: 700;
-            z-index: 5;
+            border-color: var(--primary-color);
+        }
+        
+        .voice-option i {
+            margin-right: 6px;
         }
 
-        /* Dark Mode Toggle */
-        .mode-switch {
-            position: fixed;
-            top: 80px;
-            right: 20px;
-            z-index: 1000;
-            background-color: var(--secondary-color);
-            color: white;
-            border: none;
-            border-radius: 50%;
-            width: 45px;
-            height: 45px;
+        .action-buttons {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        
+        .btn-action {
+            padding: 10px 20px;
+            border-radius: 30px;
+            font-weight: 500;
             display: flex;
             align-items: center;
             justify-content: center;
-            cursor: pointer;
-            box-shadow: var(--shadow-md);
             transition: var(--transition);
         }
-
-        .mode-switch:hover {
-            transform: scale(1.1);
+        
+        .btn-action i {
+            margin-right: 8px;
+        }
+        
+        .btn-refresh {
+            background-color: var(--accent-color);
+            border-color: var(--accent-color);
+            color: white;
+        }
+        
+        .btn-refresh:hover {
+            background-color: #e88b1e;
+            border-color: #e88b1e;
+            color: white;
+        }
+        
+        .btn-voice {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+        }
+        
+        .btn-voice:hover {
+            background-color: #052c55;
+            border-color: #052c55;
         }
 
-        /* Dark Mode Styles */
-        .dark-mode {
-            background-color: #121212;
-            color: #e0e0e0;
+        /* Empty State */
+        .empty-state {
+            text-align: center;
+            padding: 50px 20px;
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .empty-state i {
+            font-size: 3rem;
+            color: var(--accent-color);
+            margin-bottom: 15px;
+        }
+        
+        .empty-state h3 {
+            color: var(--primary-color);
+            margin-bottom: 15px;
         }
 
-        .dark-mode .news-card {
-            background-color: #1e1e1e;
-            border-color: #333;
+        /* Loading Spinner */
+        .spinner-container {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.7);
+            z-index: 2000;
+            justify-content: center;
+            align-items: center;
         }
 
-        .dark-mode .news-script,
-        .dark-mode .news-timestamp {
-            color: #b0b0b0;
+        .spinner-content {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            text-align: center;
+            max-width: 90%;
+            width: 320px;
         }
 
-        .dark-mode .audio-card {
-            background-color: #2a2a2a;
+        .spinner-border {
+            width: 3rem;
+            height: 3rem;
+            color: var(--accent-color);
         }
-
-        .dark-mode .news-header h2 {
-            color: #e0e0e0;
+        
+        /* Status indicator */
+        .status-badge {
+            display: inline-block;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            margin-left: auto;
         }
-
-        .dark-mode .custom-alert {
-            background-color: #2a2a2a;
-            color: #e0e0e0;
+        
+        .status-active {
+            background-color: #d1fae5;
+            color: #065f46;
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--primary-color);
+            color: white;
+            padding: 20px 0;
+            margin-top: 40px;
+            text-align: center;
+        }
+        
+        footer a {
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+        
+        footer a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Responsive fixes */
+        @media (max-width: 768px) {
+            .news-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .news-header h2 {
+                margin-bottom: 15px;
+            }
+            
+            .action-buttons {
+                width: 100%;
+                margin-top: 15px;
+            }
+            
+            .btn-action {
+                flex: 1;
+            }
         }
     </style>
 </head>
@@ -595,324 +358,251 @@
     <!-- Navigation Bar -->
     <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container">
-            <a class="navbar-brand" href="#">
-                <i class="bi bi-broadcast-pin me-2"></i>Dawn AI News Anchor
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#"><i class="bi bi-house-door me-1"></i>Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#"><i class="bi bi-newspaper me-1"></i>Headlines</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#"><i class="bi bi-info-circle me-1"></i>About</a>
-                    </li>
-                </ul>
+            <a class="navbar-brand" href="#"><i class="bi bi-newspaper"></i> Dawn AI News Reader</a>
+            <div class="status-badge status-active">
+                <i class="bi bi-broadcast"></i> Live
             </div>
         </div>
     </nav>
 
     <!-- Main Content -->
-    <main>
-        <!-- Studio Section -->
-        <section class="studio-container">
-            <div class="container">
-                <div class="avatar-container">
-                    <div class="news-live">
-                        <span class="live-dot"></span>LIVE
-                    </div>
-                    <div class="avatar-placeholder">
-                        <div class="avatar-content">
-                            <div class="avatar-logo">Dawn News AI Anchor</div>
-                            <p class="avatar-caption">Bringing you the latest news from Pakistan and around the world through advanced AI technology</p>
-                        </div>
-                    </div>
-                    <div class="news-ticker">
-                        <div class="ticker-content">
-                            <span class="ticker-item"><strong>Breaking:</strong> Gaza death toll surges to 52,495 with 70 killed in past 2 days</span>
-                            <span class="ticker-item"><strong>Latest:</strong> Pakistan successfully tests launch of short-range Abdali ballistic missile</span>
-                            <span class="ticker-item"><strong>Update:</strong> Security forces kill 5 terrorists, arrest 2 in KP operations: ISPR</span>
-                            <span class="ticker-item"><strong>World:</strong> Pakistan envoy to US calls on world to resolve Kashmir dispute</span>
-                        </div>
-                    </div>
-                </div>
+    <div class="container news-container">
+        <!-- Control Panel -->
+        <div class="control-panel">
+            <h4 class="voice-selector-title"><i class="bi bi-mic-fill"></i> Select a Voice</h4>
+            <div class="voice-options" id="voice-options">
+                <!-- Voice options will be loaded here -->
             </div>
-        </section>
-
-        <!-- News Content Section -->
-        <section class="news-content-section">
-            <div class="container news-container">
-                <div class="news-header">
-                    <h2>Latest News Updates</h2>
-                    <span class="latest-update" id="updateTimestamp">Last updated: <span id="updateTime">Just now</span></span>
-                </div>
-
-                <!-- News Cards -->
-                <div id="newsContainer">
-                    <div class="loading">
-                        <div class="spinner-border text-primary" role="status"></div>
-                        <p>Loading the latest news headlines...</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- Action Buttons -->
-    <button id="refreshBtn" class="action-button" title="Refresh News Display">
-        <i class="bi bi-arrow-clockwise"></i>
-    </button>
-
-    <button id="updateNewsBtn" class="action-button" title="Fetch New Articles">
-        <span class="spinner-border" role="status" aria-hidden="true"></span>
-        <i class="bi bi-cloud-download me-2"></i>Update News
-    </button>
-
-    <!-- Dark Mode Switch -->
-    <button class="mode-switch" id="darkModeToggle" title="Toggle Dark Mode">
-        <i class="bi bi-moon-stars"></i>
-    </button>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-info">
-                    <div class="footer-brand">Dawn AI News</div>
-                    <p>Using AI technology to transform online news into broadcast-ready content. A revolutionary approach to news delivery.</p>
-                </div>
-                <div class="footer-links">
-                    <h5>Quick Links</h5>
-                    <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Top Stories</a></li>
-                        <li><a href="#">Pakistan</a></li>
-                        <li><a href="#">World</a></li>
-                    </ul>
-                </div>
-                <div class="footer-links">
-                    <h5>About</h5>
-                    <ul>
-                        <li><a href="#">Our Technology</a></li>
-                        <li><a href="#">Contact Us</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Terms of Service</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom text-center">
-                <p>© 2025 Dawn AI News Anchor. All rights reserved.</p>
+            
+            <div class="action-buttons">
+                <button class="btn btn-action btn-refresh" id="get-latest-news">
+                    <i class="bi bi-arrow-clockwise"></i> Get Latest News
+                </button>
+                <button class="btn btn-action btn-voice btn-primary" id="refresh-news">
+                    <i class="bi bi-play-fill"></i> Generate Audio
+                </button>
             </div>
         </div>
+
+        <!-- News Header -->
+        <div class="news-header">
+            <h2>Latest Headlines</h2>
+            <div id="last-updated"></div>
+        </div>
+
+        <!-- News List -->
+        <div id="news-list">
+            <!-- News articles will be loaded here -->
+            <div class="d-flex justify-content-center">
+                <div class="spinner-border text-primary" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>Powered by Amazon Polly and Dawn News</p>
+        </div>
     </footer>
+
+    <!-- Loading Spinner -->
+    <div class="spinner-container" id="loading-spinner">
+        <div class="spinner-content">
+            <div class="spinner-border" role="status"></div>
+            <p class="mt-3 message">Processing your request...</p>
+            <p class="small text-muted mt-2">This may take a few moments</p>
+        </div>
+    </div>
 
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            // Initialize
-            loadNews();
-            updateTimestamp();
-            setupAudioEvents();
-            setupDarkMode();
+            // DOM elements
+            const newsListEl = document.getElementById('news-list');
+            const voiceOptionsEl = document.getElementById('voice-options');
+            const refreshBtn = document.getElementById('refresh-news');
+            const getLatestNewsBtn = document.getElementById('get-latest-news');
+            const loadingSpinner = document.getElementById('loading-spinner');
+            const loadingMessage = loadingSpinner.querySelector('.message');
+            const lastUpdatedEl = document.getElementById('last-updated');
             
-            // Set up event listeners
-            document.getElementById('refreshBtn').addEventListener('click', loadNews);
-            document.getElementById('updateNewsBtn').addEventListener('click', updateNews);
-            document.getElementById('darkModeToggle').addEventListener('click', toggleDarkMode);
-        });
-
-        // Function to fetch and display news
-        async function loadNews() {
-            try {
-                const response = await fetch('/api/news');
-                const data = await response.json();
-                
-                const newsContainer = document.getElementById('newsContainer');
-                
-                // Clear loading message
-                newsContainer.innerHTML = '';
-                
-                if (data.articles && data.articles.length > 0) {
-                    data.articles.forEach((article, index) => {
-                        const newsCard = document.createElement('div');
-                        newsCard.className = 'news-card';
-                        newsCard.id = `news-${index}`;
-                        
-                        newsCard.innerHTML = `
-                            <div class="news-card-header">
-                                <h3>${article.title}</h3>
-                            </div>
-                            <div class="news-card-body">
-                                <div class="row">
-                                    <div class="col-md-4">
-                                        <img src="${article.image_url || '/static/images/news_placeholder.jpg'}" 
-                                             class="news-image" 
-                                             alt="News Image"
-                                             onerror="this.src='/static/images/news_placeholder.jpg'">
-                                    </div>
-                                    <div class="col-md-8">
-                                        <div class="news-timestamp">
-                                            <i class="bi bi-calendar-check"></i> ${article.timestamp}
-                                        </div>
-                                        <div class="news-content-wrapper">
-                                            <div class="news-script">${article.script}</div>
-                                            <div class="audio-card">
-                                                <span class="audio-label"><i class="bi bi-headphones me-2"></i>Listen to this news:</span>
-                                                <audio controls class="audio-player" data-news-id="${index}">
-                                                    <source src="${article.audio_url}" type="audio/mpeg">
-                                                    Your browser does not support the audio element.
-                                                </audio>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+            // Default to Matthew for news voice
+            let selectedVoice = 'Matthew'; 
+            
+            // Update the last updated timestamp
+            function updateLastUpdated() {
+                const now = new Date();
+                lastUpdatedEl.innerHTML = `
+                    <span class="text-muted small">
+                        <i class="bi bi-clock"></i> 
+                        Last updated: ${now.toLocaleDateString()} at ${now.toLocaleTimeString()}
+                    </span>
+                `;
+            }
+            
+            // Load available voices
+            fetch('/available-voices')
+                .then(response => response.json())
+                .then(voices => {
+                    voiceOptionsEl.innerHTML = '';
+                    voices.forEach(voice => {
+                        const genderIcon = voice.accent.includes('Female') ? 'bi-person-fill' : 'bi-person';
+                        const voiceOption = document.createElement('div');
+                        voiceOption.className = `voice-option ${voice.id === selectedVoice ? 'active' : ''}`;
+                        voiceOption.dataset.voiceId = voice.id;
+                        voiceOption.innerHTML = `
+                            <i class="bi ${genderIcon}"></i>
+                            ${voice.name} <span class="small text-nowrap">(${voice.accent})</span>
                         `;
                         
-                        newsContainer.appendChild(newsCard);
+                        voiceOption.addEventListener('click', function() {
+                            document.querySelectorAll('.voice-option').forEach(el => el.classList.remove('active'));
+                            this.classList.add('active');
+                            selectedVoice = this.dataset.voiceId;
+                            console.log("Voice selected:", selectedVoice);
+                        });
+                        voiceOptionsEl.appendChild(voiceOption);
                     });
-                    
-                    // Update timestamp
-                    updateTimestamp();
-                    setupAudioEvents();
-                    
-                } else {
-                    newsContainer.innerHTML = `
-                        <div class="custom-alert alert-info">
-                            <i class="bi bi-info-circle me-2"></i>No news available at the moment. Please check back later or click "Update News" to fetch the latest updates.
+                })
+                .catch(error => console.error('Error loading voices:', error));
+            
+            // Load news function with improved error handling and empty state
+            function loadNews() {
+                newsListEl.innerHTML = `
+                    <div class="d-flex justify-content-center p-5">
+                        <div class="spinner-border text-primary" role="status">
+                            <span class="visually-hidden">Loading...</span>
                         </div>
-                    `;
-                }
-            } catch (error) {
-                console.error('Error loading news:', error);
-                document.getElementById('newsContainer').innerHTML = `
-                    <div class="custom-alert alert-danger">
-                        <i class="bi bi-exclamation-triangle me-2"></i>Error loading news. Please try again later.
                     </div>
                 `;
-            }
-        }
-        
-        // Function to trigger news update process
-        async function updateNews() {
-            const updateBtn = document.getElementById('updateNewsBtn');
-            updateBtn.disabled = true;
-            updateBtn.classList.add('btn-updating');
-            
-            try {
-                const response = await fetch('/refresh-news');
-                const result = await response.json();
                 
-                if (result.status === 'success') {
-                    // Show success message
-                    const newsContainer = document.getElementById('newsContainer');
-                    newsContainer.innerHTML = `
-                        <div class="custom-alert alert-success">
-                            <i class="bi bi-check-circle me-2"></i>News updated successfully! Loading new content...
-                        </div>
-                    `;
-                    
-                    // Wait a moment then refresh the display
-                    setTimeout(() => {
-                        loadNews();
-                    }, 2000);
-                } else {
-                    throw new Error(result.message || 'Failed to update news');
-                }
-            } catch (error) {
-                console.error('Error updating news:', error);
-                const newsContainer = document.getElementById('newsContainer');
-                newsContainer.innerHTML = `
-                    <div class="custom-alert alert-danger">
-                        <i class="bi bi-exclamation-triangle me-2"></i>Error updating news: ${error.message}
-                    </div>
-                `;
-            } finally {
-                // Re-enable the button
-                updateBtn.disabled = false;
-                updateBtn.classList.remove('btn-updating');
-            }
-        }
-        
-        // Function to update the timestamp
-        function updateTimestamp() {
-            const now = new Date();
-            const options = { 
-                month: 'short', 
-                day: 'numeric', 
-                year: 'numeric',
-                hour: '2-digit', 
-                minute: '2-digit'
-            };
-            document.getElementById('updateTime').textContent = now.toLocaleDateString('en-US', options);
-        }
-        
-        // Function to setup audio events
-        function setupAudioEvents() {
-            const audioPlayers = document.querySelectorAll('.audio-player');
-            
-            audioPlayers.forEach(player => {
-                player.addEventListener('play', function() {
-                    // Remove currently playing class from all news cards
-                    document.querySelectorAll('.news-card').forEach(card => {
-                        card.classList.remove('currently-playing');
-                    });
-                    
-                    // Add it to the current card
-                    const newsId = this.getAttribute('data-news-id');
-                    if (newsId) {
-                        document.getElementById(`news-${newsId}`).classList.add('currently-playing');
-                    }
-                    
-                    // Pause other players
-                    audioPlayers.forEach(otherPlayer => {
-                        if (otherPlayer !== player && !otherPlayer.paused) {
-                            otherPlayer.pause();
+                fetch('/api/news')
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.error) {
+                            showEmptyState('No News Available', data.error, 'bi-exclamation-circle');
+                            return;
                         }
+                        
+                        if (!data.articles || data.articles.length === 0) {
+                            showEmptyState('No News Articles', 'Try refreshing to get the latest news.', 'bi-newspaper');
+                            return;
+                        }
+                        
+                        updateLastUpdated();
+                        renderNewsCards(data.articles);
+                    })
+                    .catch(error => {
+                        console.error('Error loading news:', error);
+                        showEmptyState('Error Loading News', error.message, 'bi-exclamation-triangle');
                     });
-                });
-                
-                player.addEventListener('ended', function() {
-                    const newsId = this.getAttribute('data-news-id');
-                    if (newsId) {
-                        document.getElementById(`news-${newsId}`).classList.remove('currently-playing');
-                    }
-                });
-            });
-        }
-        
-        // Dark mode functionality
-        function setupDarkMode() {
-            // Check for saved preference
-            const darkModeEnabled = localStorage.getItem('darkMode') === 'enabled';
-            if (darkModeEnabled) {
-                document.body.classList.add('dark-mode');
-                updateDarkModeIcon(true);
             }
-        }
-        
-        function toggleDarkMode() {
-            const isDarkMode = document.body.classList.toggle('dark-mode');
-            updateDarkModeIcon(isDarkMode);
             
-            // Save preference
-            localStorage.setItem('darkMode', isDarkMode ? 'enabled' : 'disabled');
-        }
-        
-        function updateDarkModeIcon(isDarkMode) {
-            const icon = document.querySelector('.mode-switch i');
-            if (isDarkMode) {
-                icon.className = 'bi bi-sun';
-            } else {
-                icon.className = 'bi bi-moon-stars';
+            // Function to show empty state with custom message
+            function showEmptyState(title, message, icon) {
+                newsListEl.innerHTML = `
+                    <div class="empty-state">
+                        <i class="bi ${icon}"></i>
+                        <h3>${title}</h3>
+                        <p>${message}</p>
+                        <button class="btn btn-action btn-refresh mt-3" onclick="document.getElementById('get-latest-news').click()">
+                            <i class="bi bi-arrow-clockwise"></i> Refresh News
+                        </button>
+                    </div>
+                `;
             }
-        }
+            
+            // Function to render news cards
+            function renderNewsCards(articles) {
+                newsListEl.innerHTML = '';
+                
+                articles.forEach(article => {
+                    const card = document.createElement('div');
+                    card.className = 'news-card';
+                    
+                    // Format the date nicely
+                    const timestamp = article.timestamp || 'Just now';
+                    
+                    card.innerHTML = `
+                        <div class="news-card-body">
+                            <h3 class="news-card-title">${article.title}</h3>
+                            <div class="news-meta">
+                                <span><i class="bi bi-clock"></i> ${timestamp}</span>
+                                <span><i class="bi bi-mic"></i> ${article.voice}</span>
+                            </div>
+                            <p class="news-text">${article.script}</p>
+                            <div class="audio-player">
+                                <audio controls src="${article.audio_url}"></audio>
+                            </div>
+                        </div>
+                    `;
+                    newsListEl.appendChild(card);
+                });
+            }
+            
+            // Initial news load
+            loadNews();
+            
+            // Get Latest News button - fetches new articles AND generates audio with current voice
+            getLatestNewsBtn.addEventListener('click', function() {
+                loadingSpinner.style.display = 'flex';
+                loadingMessage.textContent = 'Fetching latest news...';
+                
+                // Instead of just scraping, we'll do a full refresh with the current voice
+                const encodedVoice = encodeURIComponent(selectedVoice);
+                const url = `/refresh-news?voice=${encodedVoice}`;
+                
+                fetch(url)
+                    .then(response => response.json())
+                    .then(data => {
+                        loadingSpinner.style.display = 'none';
+                        if (data.status === 'success') {
+                            // Reload the news feed with the new audio
+                            loadNews();
+                        } else {
+                            alert('Error updating news: ' + data.message);
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Error updating news:', error);
+                        alert('Error updating news: ' + error.message);
+                        loadingSpinner.style.display = 'none';
+                    });
+            });
+            
+            // Refresh news with selected voice
+            refreshBtn.addEventListener('click', function() {
+                // Show the loading spinner
+                loadingSpinner.style.display = 'flex';
+                loadingMessage.textContent = 'Generating audio with ' + selectedVoice + '...';
+                
+                // Make the voice selection very explicit to ensure it's passed correctly
+                const encodedVoice = encodeURIComponent(selectedVoice);
+                const url = `/refresh-news?voice=${encodedVoice}`;
+                
+                fetch(url)
+                    .then(response => response.json())
+                    .then(data => {
+                        loadingSpinner.style.display = 'none';
+                        
+                        if (data.status === 'success') {
+                            // Reload the news feed with new audio
+                            loadNews();
+                        } else {
+                            alert('Error refreshing news: ' + data.message);
+                        }
+                    })
+                    .catch(error => {
+                        loadingSpinner.style.display = 'none';
+                        console.error('Error refreshing news:', error);
+                        alert('Error refreshing news: ' + error.message);
+                    });
+            });
+        });
     </script>
 </body>
 </html>

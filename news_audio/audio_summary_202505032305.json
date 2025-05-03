@@ -1,0 +1,27 @@
+{
+  "timestamp": "2025-05-03T23:05:20.110421",
+  "count": 5,
+  "voice": "Joanna",
+  "articles": [
+    {
+      "title": "Gaza journalists killed banner",
+      "audio_path": "news_audio\\Gaza_journalists_killed_banner_202505032305.mp3"
+    },
+    {
+      "title": "Pakistan envoy to US calls on world to resolve Kashmir dispute, terms it \u2018core issue\u2019 of enmity with India",
+      "audio_path": "news_audio\\Pakistan_envoy_to_US_calls_on_world_to_resolve_Kashmir_dispute__terms_it__core_issue__of_enmity_with_India_202505032305.mp3"
+    },
+    {
+      "title": "Pakistan envoy to US calls on world to resolve Kashmir dispute, terms it \u2018core issue\u2019 of enmity with India",
+      "audio_path": "news_audio\\Pakistan_envoy_to_US_calls_on_world_to_resolve_Kashmir_dispute__terms_it__core_issue__of_enmity_with_India_202505032305.mp3"
+    },
+    {
+      "title": "Hamas calls on Arab, Muslim countries to work to stop massacre in Gaza",
+      "audio_path": "news_audio\\Hamas_calls_on_Arab__Muslim_countries_to_work_to_stop_massacre_in_Gaza_202505032305.mp3"
+    },
+    {
+      "title": "Pakistan envoy to US calls on world to resolve Kashmir dispute, terms it \u2018core issue\u2019 of enmity with India",
+      "audio_path": "news_audio\\Pakistan_envoy_to_US_calls_on_world_to_resolve_Kashmir_dispute__terms_it__core_issue__of_enmity_with_India_202505032305.mp3"
+    }
+  ]
+}

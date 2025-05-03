@@ -1,0 +1,30 @@
+2025-05-03 23:48:54,215 - DawnNewsReader - INFO - Starting scheduler thread
+2025-05-03 23:48:54,217 - DawnNewsReader - INFO - Running scheduled update at 23:48:54
+2025-05-03 23:48:54,217 - DawnNewsReader - INFO - Starting Flask application
+2025-05-03 23:48:54,286 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-03 23:48:54,286 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-05-03 23:48:54,291 - werkzeug - INFO -  * Restarting with stat
+2025-05-03 23:48:54,934 - DawnNewsReader - INFO - Starting scheduler thread
+2025-05-03 23:48:54,937 - DawnNewsReader - INFO - Running scheduled update at 23:48:54
+2025-05-03 23:48:54,937 - DawnNewsReader - INFO - Starting Flask application
+2025-05-03 23:48:55,010 - werkzeug - WARNING -  * Debugger is active!
+2025-05-03 23:48:55,020 - werkzeug - INFO -  * Debugger PIN: 669-054-134
+2025-05-03 23:48:59,901 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 23:48:59] "GET / HTTP/1.1" 200 -
+2025-05-03 23:49:00,014 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 23:49:00] "GET /available-voices HTTP/1.1" 200 -
+2025-05-03 23:49:00,021 - DawnNewsReader - INFO - Using latest summary file: audio_summary_202505032341.json
+2025-05-03 23:49:00,041 - DawnNewsReader - INFO - Retrieved 5 articles
+2025-05-03 23:49:00,042 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 23:49:00] "GET /api/news HTTP/1.1" 200 -
+2025-05-03 23:49:00,502 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 23:49:00] "[35m[1mGET /news_audio/Gaza_journalists_killed_banner_202505032341.mp3 HTTP/1.1[0m" 206 -
+2025-05-03 23:49:00,533 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 23:49:00] "[35m[1mGET /news_audio/Three_babies_among_11_killed_in_Israel_attack_on_Khan_Younis_202505032341.mp3 HTTP/1.1[0m" 206 -
+2025-05-03 23:49:00,533 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 23:49:00] "[35m[1mGET /news_audio/Pakistan_envoy_to_US_calls_on_world_to_resolve_Kashmir_dispute__terms_it__core_issue__of_enmity_with_India_202505032341.mp3 HTTP/1.1[0m" 206 -
+2025-05-03 23:49:00,540 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 23:49:00] "[35m[1mGET /news_audio/Pakistan_envoy_to_US_calls_on_world_to_resolve_Kashmir_dispute__terms_it__core_issue__of_enmity_with_India_202505032341.mp3 HTTP/1.1[0m" 206 -
+2025-05-03 23:49:00,543 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 23:49:00] "[35m[1mGET /news_audio/Zelensky_says_won_t_play_Putin_s__games__with_short_truce_202505032341.mp3 HTTP/1.1[0m" 206 -
+2025-05-03 23:49:06,544 - DawnNewsReader - INFO - Using voice for scheduled update: Brian
+2025-05-03 23:49:06,828 - DawnNewsReader - INFO - Using voice for scheduled update: Brian
+2025-05-03 23:49:09,337 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 23:49:09] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-05-03 23:49:12,384 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 23:49:12] "[35m[1mGET /news_audio/Gaza_journalists_killed_banner_202505032341.mp3 HTTP/1.1[0m" 206 -
+2025-05-03 23:49:15,764 - DawnNewsReader - INFO - Scheduled update completed successfully
+2025-05-03 23:49:15,765 - DawnNewsReader - INFO - Waiting for next scheduled update in 1 hour
+2025-05-03 23:49:15,869 - DawnNewsReader - INFO - Scheduled update completed successfully
+2025-05-03 23:49:15,870 - DawnNewsReader - INFO - Waiting for next scheduled update in 1 hour
