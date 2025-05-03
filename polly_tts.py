@@ -48,7 +48,18 @@ class PollyTTS:
             self.polly_client = None
     
     def _load_aws_credentials(self):
-        """Load AWS credentials from config file"""
+        """Load AWS credentials from environment variables or config file as fallback"""
+        # Try loading from environment variables first (preferred method)
+        self.aws_access_key_id = os.environ.get("AWS_ACCESS_KEY_ID")
+        self.aws_secret_access_key = os.environ.get("AWS_SECRET_ACCESS_KEY")
+        self.region = os.environ.get("AWS_REGION", "us-east-1")
+        
+        # If environment variables are set, use them
+        if self.aws_access_key_id and self.aws_secret_access_key:
+            logger.info("AWS credentials loaded from environment variables")
+            return
+            
+        # Otherwise, fall back to config file (less secure, for development only)
         config_path = os.path.join(os.path.dirname(__file__), "aws_config.json")
         if os.path.exists(config_path):
             try:
@@ -59,24 +70,15 @@ class PollyTTS:
                     self.region = config.get("AWS_REGION", "us-east-1")
                     
                     if self.aws_access_key_id and self.aws_secret_access_key:
-                        logger.info("AWS credentials loaded successfully")
+                        logger.info("AWS credentials loaded from config file")
                     else:
                         logger.error("AWS credentials not found or not properly set in aws_config.json")
             except Exception as e:
-                logger.error(f"Error loading AWS credentials: {e}")
+                logger.error(f"Error loading AWS credentials from config: {e}")
                 self.aws_access_key_id = None
                 self.aws_secret_access_key = None
         else:
-            logger.error(f"AWS config file not found at {config_path}")
-            # Try loading from environment variables as fallback
-            self.aws_access_key_id = os.environ.get("AWS_ACCESS_KEY_ID")
-            self.aws_secret_access_key = os.environ.get("AWS_SECRET_ACCESS_KEY")
-            self.region = os.environ.get("AWS_REGION", "us-east-1")
-            
-            if self.aws_access_key_id and self.aws_secret_access_key:
-                logger.info("AWS credentials loaded from environment variables")
-            else:
-                logger.error("AWS credentials not found in environment variables")
+            logger.error(f"AWS config file not found and no environment variables set")
     
     def get_latest_articles(self):
         """Get the latest scraped articles"""
