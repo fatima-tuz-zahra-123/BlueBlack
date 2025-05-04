@@ -1,0 +1,1046 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dawn AI News Reader</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Playfair+Display:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+        :root {
+            --primary-color: #062A52;
+            --secondary-color: #0A3B6C;
+            --accent-color: #0077CC;
+            --light-color: #f8f9fa;
+            --dark-color: #111111;
+            --text-color: #333;
+            --card-bg: #fff;
+            --shadow-sm: 0 2px 8px rgba(0,0,0,0.1);
+            --shadow-md: 0 5px 15px rgba(0,0,0,0.15);
+            --transition: all 0.3s ease;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #0C0C0C;
+            color: var(--text-color);
+            line-height: 1.6;
+            padding-top: 70px;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+        }
+
+        /* Navbar Styling */
+        .navbar {
+            background: var(--dark-color);
+            box-shadow: var(--shadow-md);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1030;
+            padding: 15px 0;
+            border-bottom: 3px solid var(--accent-color);
+        }
+
+        .navbar-brand {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            font-size: 1.8rem;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+            display: flex;
+            align-items: center;
+        }
+        
+        .navbar-brand i {
+            color: var(--accent-color);
+            margin-right: 10px;
+        }
+
+        /* News Cards */
+        .news-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px 15px;
+        }
+
+        .news-header {
+            margin-bottom: 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: var(--dark-color);
+            padding: 15px 20px;
+            border-radius: 10px;
+            color: white;
+            border-left: 5px solid var(--accent-color);
+        }
+        
+        .news-header h2 {
+            margin: 0;
+            padding: 0;
+            color: white;
+        }
+
+        .news-anchor-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            margin-bottom: 25px;
+            background-color: var(--dark-color);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+        }
+        
+        .news-anchor-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0;
+            align-items: start;
+        }
+        
+        .news-video-column {
+            background-color: #000;
+            overflow: hidden;
+            position: sticky;
+            top: 90px;
+        }
+        
+        .news-video-column video {
+            width: 100%;
+            display: block;
+        }
+        
+        .news-content-column {
+            padding: 0;
+        }
+        
+        .news-anchor-header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 15px 20px;
+            border-bottom: 3px solid var(--accent-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .news-anchor-header h3 {
+            margin: 0;
+            font-size: 1.3rem;
+            color: white;
+        }
+        
+        .news-anchor-header .live-indicator {
+            display: flex;
+            align-items: center;
+            font-size: 0.8rem;
+            background-color: rgba(0,0,0,0.3);
+            padding: 5px 10px;
+            border-radius: 20px;
+        }
+        
+        .news-anchor-header .live-indicator i {
+            color: #f44336;
+            margin-right: 5px;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.3;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        
+        .news-anchor-script {
+            background: #f8f9fa;
+            padding: 20px;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            max-height: 500px;
+            overflow-y: auto;
+            color: #333;
+        }
+        
+        .news-channel-branding {
+            position: absolute;
+            bottom: 15px;
+            left: 15px;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-weight: bold;
+            color: white;
+            z-index: 10;
+            font-size: 0.9rem;
+            border: 1px solid var(--accent-color);
+        }
+        
+        .news-video-placeholder {
+            background: linear-gradient(135deg, #062A52 0%, #0A3B6C 100%);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 350px;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .news-video-placeholder i {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: var(--accent-color);
+        }
+        
+        .video-controls {
+            background: rgba(0,0,0,0.7);
+            padding: 15px;
+            text-align: center;
+        }
+
+        /* Control Panel */
+        .control-panel {
+            padding: 25px;
+            background-color: var(--dark-color);
+            border-radius: 12px;
+            box-shadow: var(--shadow-md);
+            margin-bottom: 25px;
+            border-top: 4px solid var(--accent-color);
+            color: white;
+        }
+
+        .voice-selector-title {
+            margin-bottom: 15px;
+            color: white;
+            display: flex;
+            align-items: center;
+        }
+        
+        .voice-selector-title i {
+            margin-right: 8px;
+            color: var(--accent-color);
+        }
+
+        .voice-options {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 15px;
+            margin-bottom: 20px;
+        }
+
+        .voice-option {
+            padding: 10px 18px;
+            border-radius: 30px;
+            background-color: rgba(255,255,255,0.1);
+            cursor: pointer;
+            transition: var(--transition);
+            font-size: 0.95rem;
+            border: 1px solid rgba(255,255,255,0.2);
+            display: flex;
+            align-items: center;
+            color: rgba(255,255,255,0.8);
+        }
+
+        .voice-option:hover {
+            background-color: rgba(0, 119, 204, 0.3);
+            border-color: var(--accent-color);
+        }
+
+        .voice-option.active {
+            background-color: var(--accent-color);
+            color: white;
+            border-color: var(--accent-color);
+        }
+        
+        .voice-option i {
+            margin-right: 6px;
+        }
+
+        .action-buttons {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        
+        .btn-action {
+            padding: 10px 20px;
+            border-radius: 30px;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+        }
+        
+        .btn-action i {
+            margin-right: 8px;
+        }
+        
+        .btn-refresh {
+            background-color: var(--accent-color);
+            border-color: var(--accent-color);
+            color: white;
+        }
+        
+        .btn-refresh:hover {
+            background-color: #005fa3;
+            border-color: #005fa3;
+            color: white;
+        }
+        
+        .btn-voice {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+        }
+        
+        .btn-voice:hover {
+            background-color: #041e3b;
+            border-color: #041e3b;
+        }
+
+        .audio-player {
+            background-color: rgba(10, 59, 108, 0.1);
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 15px;
+            border: 1px solid rgba(0, 119, 204, 0.3);
+        }
+
+        .audio-player audio {
+            width: 100%;
+            height: 40px;
+        }
+
+        /* Empty State */
+        .empty-state {
+            text-align: center;
+            padding: 50px 20px;
+            background-color: var(--dark-color);
+            border-radius: 12px;
+            box-shadow: var(--shadow-md);
+            color: white;
+        }
+        
+        .empty-state i {
+            font-size: 3rem;
+            color: var(--accent-color);
+            margin-bottom: 15px;
+        }
+        
+        .empty-state h3 {
+            color: white;
+            margin-bottom: 15px;
+        }
+
+        /* Loading Spinner */
+        .spinner-container {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.8);
+            z-index: 2000;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .spinner-content {
+            background: var(--dark-color);
+            padding: 40px;
+            border-radius: 15px;
+            text-align: center;
+            max-width: 90%;
+            width: 320px;
+            color: white;
+            border: 1px solid var(--accent-color);
+        }
+
+        .spinner-border {
+            width: 3rem;
+            height: 3rem;
+            color: var(--accent-color);
+        }
+        
+        /* Status indicator */
+        .status-badge {
+            display: inline-block;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            margin-left: auto;
+        }
+        
+        .status-active {
+            background-color: rgba(0, 119, 204, 0.2);
+            color: var(--accent-color);
+            border: 1px solid var(--accent-color);
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--dark-color);
+            color: white;
+            padding: 20px 0;
+            margin-top: 40px;
+            text-align: center;
+            border-top: 3px solid var(--accent-color);
+        }
+        
+        footer a {
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+        
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* News meta */
+        .news-meta {
+            font-size: 0.85rem;
+            color: #888;
+            margin-bottom: 15px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .news-meta i {
+            margin-right: 5px;
+            color: var(--accent-color);
+        }
+
+        .news-meta span {
+            margin-right: 15px;
+            margin-bottom: 5px;
+            display: flex;
+            align-items: center;
+        }
+        
+        /* Responsive fixes */
+        @media (max-width: 768px) {
+            // ...existing code...
+        }
+        
+        @media (max-width: 576px) {
+            // ...existing code...
+        }
+    </style>
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container">
+        <a class="navbar-brand" href="#"
+          ><i class="bi bi-newspaper"></i> Dawn AI News Reader</a
+        >
+        <div class="status-badge status-active">
+          <i class="bi bi-broadcast"></i> Live
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container news-container">
+        <!-- Control Panel -->
+        <div class="control-panel">
+            <h4 class="voice-selector-title">
+                <i class="bi bi-mic-fill"></i> Select a Voice
+            </h4>
+            <div class="voice-options" id="voice-options">
+                <!-- Voice options will be loaded here -->
+            </div>
+
+            <div class="action-buttons">
+                <button class="btn btn-action btn-refresh" id="get-latest-news">
+                    <i class="bi bi-arrow-clockwise"></i> Get Latest News
+                </button>
+                <button
+                    class="btn btn-action btn-voice btn-primary"
+                    id="refresh-news"
+                >
+                    <i class="bi bi-play-fill"></i> Generate Audio
+                </button>
+                <button class="btn btn-action btn-outline-light" id="generate-top-headlines">
+                    <i class="bi bi-stars"></i> Generate AI Summary
+                </button>
+            </div>
+        </div>
+
+        <!-- Top Headlines Section (initially hidden) -->
+        <div id="top-headlines-container" style="display:none" class="mb-5">
+            <div class="news-header mb-3">
+                <h2><i class="bi bi-stars"></i> Breaking News</h2>
+                <div id="top-headlines-timestamp" class="text-light"></div>
+            </div>
+            
+            <div class="news-anchor-container">
+                <div class="news-anchor-layout">
+                    <div class="news-video-column" id="top-headlines-video">
+                        <!-- Video will be loaded here -->
+                        <div class="news-video-placeholder">
+                            <i class="bi bi-stars"></i>
+                            <h4>AI Generated Summary</h4>
+                            <p>Generate a video of a news anchor presenting the key headlines</p>
+                            <button class="btn btn-primary" id="generate-headline-video-btn">
+                                <i class="bi bi-camera-video"></i> Generate News Anchor Video
+                            </button>
+                        </div>
+                    </div>
+                    <div class="news-content-column">
+                        <div class="news-anchor-header">
+                            <h3>Breaking News Summary</h3>
+                            <div class="live-indicator">
+                                <i class="bi bi-broadcast"></i> LIVE
+                            </div>
+                        </div>
+                        <div class="news-anchor-script">
+                            <p id="top-headlines-summary">
+                                Use the "Generate AI Summary" button to create a Gemini-powered summary of the top headlines.
+                            </p>
+                            <div class="audio-player mt-4" id="top-headlines-audio" style="display:none">
+                                <h5 class="mb-2"><i class="bi bi-music-note-beamed"></i> Audio Narration</h5>
+                                <audio controls></audio>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- News Header -->
+        <div class="news-header">
+            <h2>Latest Headlines</h2>
+            <div id="last-updated"></div>
+        </div>
+
+        <!-- News List -->
+        <div id="news-list">
+            <!-- News articles will be loaded here -->
+            <div class="d-flex justify-content-center">
+                <div class="spinner-border text-primary" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <p>Powered by Amazon Polly and Dawn News</p>
+      </div>
+    </footer>
+
+    <!-- Loading Spinner -->
+    <div class="spinner-container" id="loading-spinner">
+      <div class="spinner-content">
+        <div class="spinner-border" role="status"></div>
+        <p class="mt-3 message">Processing your request...</p>
+        <p class="small text-muted mt-2">This may take a few moments</p>
+      </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // DOM elements
+        const newsListEl = document.getElementById("news-list");
+        const voiceOptionsEl = document.getElementById("voice-options");
+        const refreshBtn = document.getElementById("refresh-news");
+        const getLatestNewsBtn = document.getElementById("get-latest-news");
+        const loadingSpinner = document.getElementById("loading-spinner");
+        const loadingMessage = loadingSpinner.querySelector(".message");
+        const lastUpdatedEl = document.getElementById("last-updated");
+        const generateTopHeadlinesBtn = document.getElementById("generate-top-headlines");
+        const generateHeadlineVideoBtn = document.getElementById("generate-headline-video-btn");
+        const topHeadlinesContainer = document.getElementById("top-headlines-container");
+        const topHeadlinesVideo = document.getElementById("top-headlines-video");
+        const topHeadlinesSummary = document.getElementById("top-headlines-summary");
+        const topHeadlinesTimestamp = document.getElementById("top-headlines-timestamp");
+        const topHeadlinesAudio = document.getElementById("top-headlines-audio");
+
+        // Default to Matthew for news voice
+        let selectedVoice = "Matthew";
+
+        // Update the last updated timestamp
+        function updateLastUpdated() {
+          const now = new Date();
+          lastUpdatedEl.innerHTML = `
+                    <span class="text-muted small">
+                        <i class="bi bi-clock"></i> 
+                        Last updated: ${now.toLocaleDateString()} at ${now.toLocaleTimeString()}
+                    </span>
+                `;
+        }
+
+        // Function to load top headlines if they exist
+        function loadTopHeadlines() {
+          fetch("/api/top-headlines")
+            .then((response) => response.json())
+            .then((data) => {
+              if (data.status === "success" && data.summary) {
+                // Show the top headlines section
+                topHeadlinesContainer.style.display = "block";
+                topHeadlinesSummary.textContent = data.summary;
+                
+                // Set timestamp if available
+                if (data.timestamp) {
+                  topHeadlinesTimestamp.innerHTML = `
+                    <span class="text-muted small">
+                      <i class="bi bi-clock"></i> Generated: ${data.timestamp}
+                    </span>
+                  `;
+                }
+                
+                // Show video if available
+                if (data.video_url) {
+                  topHeadlinesVideo.innerHTML = `
+                    <video controls width="100%" poster="/static/images/video_poster.jpg">
+                      <source src="${data.video_url}" type="video/mp4">
+                      Your browser doesn't support video playback.
+                    </video>
+                    <div class="news-channel-branding">Dawn News</div>
+                  `;
+                }
+                
+                // Show audio if available
+                if (data.audio_url) {
+                  topHeadlinesAudio.style.display = "block";
+                  const audioEl = topHeadlinesAudio.querySelector("audio");
+                  audioEl.src = data.audio_url;
+                }
+              }
+            })
+            .catch((error) => {
+              console.error("Error loading top headlines:", error);
+            });
+        }
+
+        // Function to generate new top headlines with Gemini API
+        function generateTopHeadlines() {
+          // Show loading spinner
+          loadingSpinner.style.display = "flex";
+          loadingMessage.textContent = "Generating AI summary of top news stories...";
+          
+          // Make API call to generate headlines with the hardcoded API key
+          const encodedVoice = encodeURIComponent(selectedVoice);
+          const url = `/generate-top-headlines?voice=${encodedVoice}`;
+          
+          fetch(url)
+            .then((response) => response.json())
+            .then((data) => {
+              loadingSpinner.style.display = "none";
+              
+              if (data.status === "success" || data.status === "partial") {
+                // Update the UI with the new summary
+                topHeadlinesContainer.style.display = "block";
+                topHeadlinesSummary.textContent = data.summary;
+                
+                const now = new Date();
+                topHeadlinesTimestamp.innerHTML = `
+                  <span class="text-muted small">
+                    <i class="bi bi-clock"></i> Generated: ${now.toLocaleDateString()} at ${now.toLocaleTimeString()}
+                  </span>
+                `;
+                
+                // If we have a video URL, show the video
+                if (data.video_url) {
+                  topHeadlinesVideo.innerHTML = `
+                    <video controls width="100%" autoplay poster="/static/images/video_poster.jpg">
+                      <source src="${data.video_url}" type="video/mp4">
+                      Your browser doesn't support video playback.
+                    </video>
+                    <div class="news-channel-branding">Dawn News</div>
+                  `;
+                }
+                
+                // If we have an audio URL, show the audio player
+                if (data.audio_url) {
+                  topHeadlinesAudio.style.display = "block";
+                  const audioEl = topHeadlinesAudio.querySelector("audio");
+                  audioEl.src = data.audio_url;
+                }
+                
+                // Show an alert for partial success
+                if (data.status === "partial") {
+                  alert("Generated summary text but failed to create video");
+                }
+              } else {
+                alert("Failed to generate headlines summary: " + data.message);
+              }
+            })
+            .catch((error) => {
+              loadingSpinner.style.display = "none";
+              console.error("Error generating headlines:", error);
+              alert("Error generating headlines: " + error.message);
+            });
+        }
+
+        // Generate headline video for existing summary
+        function generateHeadlineVideo() {
+          // Ask for confirmation before proceeding
+          if (!confirm("Generate a news anchor video for the current top headlines summary?")) {
+            return;
+          }
+          
+          // Show loading state
+          const originalButtonText = generateHeadlineVideoBtn.innerHTML;
+          generateHeadlineVideoBtn.disabled = true;
+          generateHeadlineVideoBtn.innerHTML = `
+            <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+            Generating Video...
+          `;
+          
+          loadingSpinner.style.display = "flex";
+          loadingMessage.textContent = "Generating news anchor video for headlines...";
+          
+          // Same API endpoint but with existing summary flag
+          const encodedVoice = encodeURIComponent(selectedVoice);
+          fetch(`/generate-top-headlines?voice=${encodedVoice}&use_existing=true`)
+            .then((response) => response.json())
+            .then((data) => {
+              loadingSpinner.style.display = "none";
+              
+              if (data.status === "success" && data.video_url) {
+                // Update with the new video
+                topHeadlinesVideo.innerHTML = `
+                  <video controls width="100%" autoplay poster="/static/images/video_poster.jpg">
+                    <source src="${data.video_url}" type="video/mp4">
+                    Your browser doesn't support video playback.
+                  </video>
+                  <div class="news-channel-branding">Dawn News</div>
+                `;
+              } else {
+                // Reset the button and show error
+                generateHeadlineVideoBtn.disabled = false;
+                generateHeadlineVideoBtn.innerHTML = originalButtonText;
+                alert("Failed to generate video: " + data.message);
+              }
+            })
+            .catch((error) => {
+              loadingSpinner.style.display = "none";
+              generateHeadlineVideoBtn.disabled = false;
+              generateHeadlineVideoBtn.innerHTML = originalButtonText;
+              console.error("Error generating video:", error);
+              alert("Error generating video: " + error.message);
+            });
+        }
+
+        // Load available voices
+        fetch("/available-voices")
+          .then((response) => response.json())
+          .then((voices) => {
+            voiceOptionsEl.innerHTML = "";
+            voices.forEach((voice) => {
+              const genderIcon = voice.accent.includes("Female")
+                ? "bi-person-fill"
+                : "bi-person";
+              const voiceOption = document.createElement("div");
+              voiceOption.className = `voice-option ${
+                voice.id === selectedVoice ? "active" : ""
+              }`;
+              voiceOption.dataset.voiceId = voice.id;
+              voiceOption.innerHTML = `
+                            <i class="bi ${genderIcon}"></i>
+                            ${voice.name} <span class="small text-nowrap">(${voice.accent})</span>
+                        `;
+
+              voiceOption.addEventListener("click", function () {
+                document
+                  .querySelectorAll(".voice-option")
+                  .forEach((el) => el.classList.remove("active"));
+                this.classList.add("active");
+                selectedVoice = this.dataset.voiceId;
+                console.log("Voice selected:", selectedVoice);
+              });
+              voiceOptionsEl.appendChild(voiceOption);
+            });
+          })
+          .catch((error) => console.error("Error loading voices:", error));
+
+        // Load news function with improved error handling and empty state
+        function loadNews() {
+          newsListEl.innerHTML = `
+                    <div class="d-flex justify-content-center p-5">
+                        <div class="spinner-border text-primary" role="status">
+                            <span class="visually-hidden">Loading...</span>
+                        </div>
+                    </div>
+                `;
+
+          fetch("/api/news")
+            .then((response) => response.json())
+            .then((data) => {
+              if (data.error) {
+                showEmptyState(
+                  "No News Available",
+                  data.error,
+                  "bi-exclamation-circle"
+                );
+                return;
+              }
+
+              if (!data.articles || data.articles.length === 0) {
+                showEmptyState(
+                  "No News Articles",
+                  "Try refreshing to get the latest news.",
+                  "bi-newspaper"
+                );
+                return;
+              }
+
+              updateLastUpdated();
+              renderNewsCards(data.articles);
+            })
+            .catch((error) => {
+              console.error("Error loading news:", error);
+              showEmptyState(
+                "Error Loading News",
+                error.message,
+                "bi-exclamation-triangle"
+              );
+            });
+        }
+
+        // Function to show empty state with custom message
+        function showEmptyState(title, message, icon) {
+          newsListEl.innerHTML = `
+                    <div class="empty-state">
+                        <i class="bi ${icon}"></i>
+                        <h3>${title}</h3>
+                        <p>${message}</p>
+                        <button class="btn btn-action btn-refresh mt-3" onclick="document.getElementById('get-latest-news').click()">
+                            <i class="bi bi-arrow-clockwise"></i> Refresh News
+                        </button>
+                    </div>
+                `;
+        }
+
+        // Function to render news cards
+        function renderNewsCards(articles) {
+            newsListEl.innerHTML = '';
+            
+            articles.forEach((article) => {
+                const card = document.createElement('div');
+                card.className = 'news-anchor-container';
+                
+                // Format the date nicely
+                const timestamp = article.timestamp || 'Just now';
+                
+                // Check if we have a video URL for this article
+                let videoContent;
+                if (article.video_url) {
+                    // Video exists - show video player
+                    videoContent = `
+                        <video controls width="100%" poster="/static/images/video_poster.jpg" id="video-${article.title.replace(/\s+/g, '-').toLowerCase()}">
+                            <source src="${article.video_url}" type="video/mp4">
+                            Your browser doesn't support video playback.
+                        </video>
+                        <div class="news-channel-branding">Dawn News</div>
+                    `;
+                } else {
+                    // No video - show placeholder with generate button
+                    videoContent = `
+                        <div class="news-video-placeholder">
+                            <i class="bi bi-camera-video"></i>
+                            <h4>News Anchor Video</h4>
+                            <p>Generate a video of a news anchor presenting this story</p>
+                            <button class="btn btn-primary generate-video-btn" 
+                                    data-audio-path="${article.audio_url.replace('/news_audio/', 'news_audio/')}"
+                                    data-title="${article.title}">
+                                <i class="bi bi-camera-video"></i> Generate News Anchor Video
+                            </button>
+                        </div>
+                    `;
+                }
+                
+                card.innerHTML = `
+                    <div class="news-anchor-layout">
+                        <div class="news-video-column">
+                            ${videoContent}
+                        </div>
+                        <div class="news-content-column">
+                            <div class="news-anchor-header">
+                                <h3>${article.title}</h3>
+                                <div class="live-indicator">
+                                    <i class="bi bi-broadcast"></i> LIVE
+                                </div>
+                            </div>
+                            <div class="news-anchor-script">
+                                <div class="news-meta mb-3">
+                                    <span><i class="bi bi-clock"></i> ${timestamp}</span>
+                                    <span><i class="bi bi-mic"></i> ${article.voice}</span>
+                                </div>
+                                <p>${article.script}</p>
+                                <div class="audio-player mt-4">
+                                    <h5 class="mb-2"><i class="bi bi-music-note-beamed"></i> Audio Narration</h5>
+                                    <audio controls src="${article.audio_url}"></audio>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                newsListEl.appendChild(card);
+            });
+            
+            // Add event listeners to all generate video buttons
+            document.querySelectorAll('.generate-video-btn').forEach(button => {
+                button.addEventListener('click', function() {
+                    const audioPath = this.dataset.audioPath;
+                    const title = this.dataset.title;
+                    generateVideoForArticle(audioPath, title, this);
+                });
+            });
+        }
+
+        // Function to generate a video for a specific article
+        function generateVideoForArticle(audioPath, title, buttonElement) {
+            // Show loading state on the button
+            const originalButtonText = buttonElement.innerHTML;
+            buttonElement.disabled = true;
+            buttonElement.innerHTML = `
+                <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                Generating Video...
+            `;
+            
+            // Show the loading spinner
+            loadingSpinner.style.display = 'flex';
+            loadingMessage.textContent = 'Generating news anchor video...';
+            
+            // Make API call to generate the video
+            const encodedPath = encodeURIComponent(audioPath);
+            fetch(`/generate-video?audio_path=${encodedPath}`)
+                .then(response => response.json())
+                .then(data => {
+                    loadingSpinner.style.display = 'none';
+                    
+                    if (data.status === 'success') {
+                        // Find the news-video-placeholder
+                        const placeholder = buttonElement.closest('.news-video-placeholder');
+                        const videoColumn = placeholder.closest('.news-video-column');
+                        
+                        // Create video element
+                        videoColumn.innerHTML = `
+                            <video controls width="100%" autoplay poster="/static/images/video_poster.jpg">
+                                <source src="${data.video_url}" type="video/mp4">
+                                Your browser doesn't support video playback.
+                            </video>
+                            <div class="news-channel-branding">Dawn News</div>
+                        `;
+                    } else {
+                        // Show error and reset button
+                        alert('Failed to generate video: ' + data.message);
+                        buttonElement.disabled = false;
+                        buttonElement.innerHTML = originalButtonText;
+                    }
+                })
+                .catch(error => {
+                    console.error('Error generating video:', error);
+                    loadingSpinner.style.display = 'none';
+                    alert('Error generating video: ' + error.message);
+                    
+                    // Reset button
+                    buttonElement.disabled = false;
+                    buttonElement.innerHTML = originalButtonText;
+                });
+        }
+
+        // Initial data loading
+        loadNews();
+        loadTopHeadlines();
+
+        // Get Latest News button - fetches new articles AND generates audio with current voice
+        getLatestNewsBtn.addEventListener("click", function () {
+          loadingSpinner.style.display = "flex";
+          loadingMessage.textContent = "Fetching latest news...";
+
+          // Instead of just scraping, we'll do a full refresh with the current voice
+          const encodedVoice = encodeURIComponent(selectedVoice);
+          const url = `/refresh-news?voice=${encodedVoice}`;
+
+          fetch(url)
+            .then((response) => response.json())
+            .then((data) => {
+              loadingSpinner.style.display = "none";
+              if (data.status === "success") {
+                // Reload the news feed with the new audio
+                loadNews();
+              } else {
+                alert("Error updating news: " + data.message);
+              }
+            })
+            .catch((error) => {
+              console.error("Error updating news:", error);
+              alert("Error updating news: " + error.message);
+              loadingSpinner.style.display = "none";
+            });
+        });
+
+        // Refresh news with selected voice
+        refreshBtn.addEventListener("click", function () {
+          // Show the loading spinner
+          loadingSpinner.style.display = "flex";
+          loadingMessage.textContent =
+            "Generating audio with " + selectedVoice + "...";
+
+          // Make the voice selection very explicit to ensure it's passed correctly
+          const encodedVoice = encodeURIComponent(selectedVoice);
+          const url = `/refresh-news?voice=${encodedVoice}`;
+
+          fetch(url)
+            .then((response) => response.json())
+            .then((data) => {
+              loadingSpinner.style.display = "none";
+
+              if (data.status === "success") {
+                // Reload the news feed with new audio
+                loadNews();
+              } else {
+                alert("Error refreshing news: " + data.message);
+              }
+            })
+            .catch((error) => {
+              loadingSpinner.style.display = "none";
+              console.error("Error refreshing news:", error);
+              alert("Error refreshing news: " + error.message);
+            });
+        });
+
+        // Generate top headlines button click handler
+        generateTopHeadlinesBtn.addEventListener("click", generateTopHeadlines);
+        
+        // Generate headline video button click handler
+        generateHeadlineVideoBtn.addEventListener("click", generateHeadlineVideo);
+      });
+    </script>
+  </body>
+</html>
