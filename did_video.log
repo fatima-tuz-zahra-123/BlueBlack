@@ -1799,3 +1799,472 @@ TypeError: DIDVideoGenerator.__init__() missing 1 required positional argument: 
 2025-05-04 02:15:07,170 - werkzeug - INFO - 127.0.0.1 - - [04/May/2025 02:15:07] "[33mGET /static/images/video_poster.jpg HTTP/1.1[0m" 404 -
 2025-05-04 02:15:13,753 - werkzeug - INFO - 127.0.0.1 - - [04/May/2025 02:15:13] "[35m[1mGET /news_videos/Pakistan_envoy_to_US_calls_on_world_to_resolve_Kashmir_dispute__terms_it__core_issue__of_enmity_with_India_202505040212.mp4 HTTP/1.1[0m" 206 -
 2025-05-04 02:15:13,761 - werkzeug - INFO - 127.0.0.1 - - [04/May/2025 02:15:13] "[35m[1mGET /news_videos/Pakistan_envoy_to_US_calls_on_world_to_resolve_Kashmir_dispute__terms_it__core_issue__of_enmity_with_India_202505040212.mp4 HTTP/1.1[0m" 206 -
+2025-05-04 11:53:11,504 - DawnNewsReader - INFO - Starting scheduler thread
+2025-05-04 11:53:11,505 - DawnNewsReader - INFO - Running scheduled update at 11:53:11
+2025-05-04 11:53:11,505 - DawnNewsReader - INFO - Starting Flask application
+2025-05-04 11:53:11,522 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+2025-05-04 11:53:11,522 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-05-04 11:53:11,529 - werkzeug - INFO -  * Restarting with watchdog (fsevents)
+2025-05-04 11:53:11,729 - DawnNewsReader - INFO - Starting scheduler thread
+2025-05-04 11:53:11,730 - DawnNewsReader - INFO - Running scheduled update at 11:53:11
+2025-05-04 11:53:11,730 - DawnNewsReader - INFO - Starting Flask application
+2025-05-04 11:53:11,741 - werkzeug - WARNING -  * Debugger is active!
+2025-05-04 11:53:11,750 - werkzeug - INFO -  * Debugger PIN: 621-218-403
+2025-05-04 11:53:14,704 - werkzeug - INFO - 127.0.0.1 - - [04/May/2025 11:53:14] "GET / HTTP/1.1" 200 -
+2025-05-04 11:53:14,769 - werkzeug - INFO - 127.0.0.1 - - [04/May/2025 11:53:14] "GET /available-voices HTTP/1.1" 200 -
+2025-05-04 11:53:14,770 - werkzeug - INFO - 127.0.0.1 - - [04/May/2025 11:53:14] "GET /api/top-headlines HTTP/1.1" 200 -
+2025-05-04 11:53:14,771 - DawnNewsReader - INFO - Using latest summary file: audio_summary_202505040213.json
+2025-05-04 11:53:14,773 - DawnNewsReader - INFO - Retrieved 5 articles
+2025-05-04 11:53:14,774 - werkzeug - INFO - 127.0.0.1 - - [04/May/2025 11:53:14] "GET /api/news HTTP/1.1" 200 -
+2025-05-04 11:53:15,077 - werkzeug - INFO - 127.0.0.1 - - [04/May/2025 11:53:15] "[35m[1mGET /news_audio/Three_babies_among_11_killed_in_Israel_attack_on_Khan_Younis_202505040213.mp3 HTTP/1.1[0m" 206 -
+2025-05-04 11:53:15,078 - werkzeug - INFO - 127.0.0.1 - - [04/May/2025 11:53:15] "[35m[1mGET /news_audio/Pakistan_envoy_to_US_calls_on_world_to_resolve_Kashmir_dispute__terms_it__core_issue__of_enmity_with_India_202505040213.mp3 HTTP/1.1[0m" 206 -
+2025-05-04 11:53:15,079 - werkzeug - INFO - 127.0.0.1 - - [04/May/2025 11:53:15] "[35m[1mGET /news_audio/Pakistan_envoy_to_US_calls_on_world_to_resolve_Kashmir_dispute__terms_it__core_issue__of_enmity_with_India_202505040213.mp3 HTTP/1.1[0m" 206 -
+2025-05-04 11:53:15,080 - werkzeug - INFO - 127.0.0.1 - - [04/May/2025 11:53:15] "[35m[1mGET /news_audio/Warren_Buffett_to_step_down_as_Berkshire_CEO__Vice_Chairman_Abel_to_take_over_202505040213.mp3 HTTP/1.1[0m" 206 -
+2025-05-04 11:53:15,080 - werkzeug - INFO - 127.0.0.1 - - [04/May/2025 11:53:15] "[35m[1mGET /news_audio/Pakistan_envoy_to_US_calls_on_world_to_resolve_Kashmir_dispute__terms_it__core_issue__of_enmity_with_India_202505040213.mp3 HTTP/1.1[0m" 206 -
+2025-05-04 11:53:15,086 - werkzeug - INFO - 127.0.0.1 - - [04/May/2025 11:53:15] "[35m[1mGET /news_audio/Three_babies_among_11_killed_in_Israel_attack_on_Khan_Younis_202505040213.mp3 HTTP/1.1[0m" 206 -
+2025-05-04 11:53:15,086 - werkzeug - INFO - 127.0.0.1 - - [04/May/2025 11:53:15] "[35m[1mGET /news_audio/Pakistan_envoy_to_US_calls_on_world_to_resolve_Kashmir_dispute__terms_it__core_issue__of_enmity_with_India_202505040213.mp3 HTTP/1.1[0m" 206 -
+2025-05-04 11:53:15,087 - werkzeug - INFO - 127.0.0.1 - - [04/May/2025 11:53:15] "[35m[1mGET /news_audio/Pakistan_envoy_to_US_calls_on_world_to_resolve_Kashmir_dispute__terms_it__core_issue__of_enmity_with_India_202505040213.mp3 HTTP/1.1[0m" 206 -
+2025-05-04 11:53:15,088 - werkzeug - INFO - 127.0.0.1 - - [04/May/2025 11:53:15] "[35m[1mGET /news_audio/Pakistan_envoy_to_US_calls_on_world_to_resolve_Kashmir_dispute__terms_it__core_issue__of_enmity_with_India_202505040213.mp3 HTTP/1.1[0m" 206 -
+2025-05-04 11:53:15,088 - werkzeug - INFO - 127.0.0.1 - - [04/May/2025 11:53:15] "[35m[1mGET /news_audio/Warren_Buffett_to_step_down_as_Berkshire_CEO__Vice_Chairman_Abel_to_take_over_202505040213.mp3 HTTP/1.1[0m" 206 -
+2025-05-04 11:53:18,458 - DawnNewsReader - INFO - Generating top headlines summary with voice: Matthew
+2025-05-04 11:53:18,465 - DawnNewsReader - ERROR - Error generating top headlines: No module named 'google.generativeai'
+Traceback (most recent call last):
+  File "/Users/fatimatuzzahra/Documents/BlueBlack/app.py", line 362, in generate_top_headlines
+    from headline_summarizer import HeadlineSummarizer
+  File "/Users/fatimatuzzahra/Documents/BlueBlack/headline_summarizer.py", line 5, in <module>
+    import google.generativeai as genai
+ModuleNotFoundError: No module named 'google.generativeai'
+2025-05-04 11:53:18,467 - werkzeug - INFO - 127.0.0.1 - - [04/May/2025 11:53:18] "GET /generate-top-headlines?voice=Matthew HTTP/1.1" 200 -
+2025-05-04 11:53:19,999 - DawnNewsReader - INFO - Using voice for scheduled update: Brian
+2025-05-04 11:53:20,040 - DawnNewsReader - INFO - Starting video generation for scheduled update...
+2025-05-04 11:53:20,040 - DIDVideoGenerator - INFO - D-ID Video Generator initialized
+2025-05-04 11:53:20,041 - DIDVideoGenerator - INFO - Video already exists: news_videos/Pakistan_envoy_to_US_calls_on_world_to_resolve_Kashmir_dispute__terms_it__core_issue__of_enmity_with_India_202505040213.mp4
+2025-05-04 11:53:20,041 - DIDVideoGenerator - INFO - Video already exists: news_videos/Pakistan_envoy_to_US_calls_on_world_to_resolve_Kashmir_dispute__terms_it__core_issue__of_enmity_with_India_202505040213.mp4
+2025-05-04 11:53:20,041 - DIDVideoGenerator - INFO - Video already exists: news_videos/Three_babies_among_11_killed_in_Israel_attack_on_Khan_Younis_202505040213.mp4
+2025-05-04 11:53:20,041 - DIDVideoGenerator - INFO - Video already exists: news_videos/Warren_Buffett_to_step_down_as_Berkshire_CEO__Vice_Chairman_Abel_to_take_over_202505040213.mp4
+2025-05-04 11:53:20,041 - DIDVideoGenerator - INFO - Video already exists: news_videos/Pakistan_envoy_to_US_calls_on_world_to_resolve_Kashmir_dispute__terms_it__core_issue__of_enmity_with_India_202505040213.mp4
+2025-05-04 11:53:20,041 - DIDVideoGenerator - INFO - Processed 5 videos for summary news_audio/audio_summary_202505040213.json
+2025-05-04 11:53:20,041 - DawnNewsReader - INFO - Scheduled update completed successfully
+2025-05-04 11:53:20,041 - DawnNewsReader - INFO - Waiting for next scheduled update in 1 hour
+2025-05-04 11:53:22,066 - DIDVideoGenerator - INFO - D-ID Video Generator initialized
+2025-05-04 11:53:22,067 - DawnNewsReader - INFO - Generating video for audio: news_audio/Pakistan_envoy_to_US_calls_on_world_to_resolve_Kashmir_dispute__terms_it__core_issue__of_enmity_with_India_202505040213.mp3
+2025-05-04 11:53:22,069 - DIDVideoGenerator - INFO - Video already exists: news_videos/Pakistan_envoy_to_US_calls_on_world_to_resolve_Kashmir_dispute__terms_it__core_issue__of_enmity_with_India_202505040213.mp4
+2025-05-04 11:53:22,070 - werkzeug - INFO - 127.0.0.1 - - [04/May/2025 11:53:22] "GET /generate-video?audio_path=news_audio/Pakistan_envoy_to_US_calls_on_world_to_resolve_Kashmir_dispute__terms_it__core_issue__of_enmity_with_India_202505040213.mp3 HTTP/1.1" 200 -
+2025-05-04 11:53:22,075 - werkzeug - INFO - 127.0.0.1 - - [04/May/2025 11:53:22] "[33mGET /static/images/video_poster.jpg HTTP/1.1[0m" 404 -
+2025-05-04 11:53:22,152 - werkzeug - INFO - 127.0.0.1 - - [04/May/2025 11:53:22] "[35m[1mGET /news_videos/Pakistan_envoy_to_US_calls_on_world_to_resolve_Kashmir_dispute__terms_it__core_issue__of_enmity_with_India_202505040213.mp4 HTTP/1.1[0m" 206 -
+2025-05-04 11:53:22,156 - werkzeug - INFO - 127.0.0.1 - - [04/May/2025 11:53:22] "[35m[1mGET /news_videos/Pakistan_envoy_to_US_calls_on_world_to_resolve_Kashmir_dispute__terms_it__core_issue__of_enmity_with_India_202505040213.mp4 HTTP/1.1[0m" 206 -
+2025-05-04 11:53:30,541 - DawnNewsReader - INFO - Refresh news request with voice: Matthew
+2025-05-04 11:53:30,544 - DawnNewsReader - INFO - Starting news scraper...
+2025-05-04 11:53:33,501 - DawnNewsReader - INFO - Using voice for scheduled update: Brian
+2025-05-04 11:53:33,539 - DawnNewsReader - INFO - Starting video generation for scheduled update...
+2025-05-04 11:53:33,539 - DIDVideoGenerator - INFO - D-ID Video Generator initialized
+2025-05-04 11:53:33,540 - DIDVideoGenerator - INFO - Video already exists: news_videos/Pakistan_envoy_to_US_calls_on_world_to_resolve_Kashmir_dispute__terms_it__core_issue__of_enmity_with_India_202505040213.mp4
+2025-05-04 11:53:33,540 - DIDVideoGenerator - INFO - Video already exists: news_videos/Pakistan_envoy_to_US_calls_on_world_to_resolve_Kashmir_dispute__terms_it__core_issue__of_enmity_with_India_202505040213.mp4
+2025-05-04 11:53:33,540 - DIDVideoGenerator - INFO - Video already exists: news_videos/Three_babies_among_11_killed_in_Israel_attack_on_Khan_Younis_202505040213.mp4
+2025-05-04 11:53:33,540 - DIDVideoGenerator - INFO - Video already exists: news_videos/Warren_Buffett_to_step_down_as_Berkshire_CEO__Vice_Chairman_Abel_to_take_over_202505040213.mp4
+2025-05-04 11:53:33,540 - DIDVideoGenerator - INFO - Video already exists: news_videos/Pakistan_envoy_to_US_calls_on_world_to_resolve_Kashmir_dispute__terms_it__core_issue__of_enmity_with_India_202505040213.mp4
+2025-05-04 11:53:33,540 - DIDVideoGenerator - INFO - Processed 5 videos for summary news_audio/audio_summary_202505040213.json
+2025-05-04 11:53:33,540 - DawnNewsReader - INFO - Scheduled update completed successfully
+2025-05-04 11:53:33,540 - DawnNewsReader - INFO - Waiting for next scheduled update in 1 hour
+2025-05-04 11:53:38,789 - DawnNewsReader - WARNING - Scraper warnings: 2025-05-04 11:53:30,753 - DawnScraper - INFO - Dawn News Scraper initialized
+2025-05-04 11:53:30,753 - DawnScraper - INFO - Starting Dawn News scraping job
+2025-05-04 11:53:32,262 - DawnScraper - INFO - Found 177 headlines
+2025-05-04 11:53:33,536 - DawnScraper - INFO - Saving article: 6 Palestinians killed as Israel continues bombarding Gaza
+2025-05-04 11:53:33,536 - DawnScraper - INFO - Saved article: 6 Palestinians killed as Israel continues bombarding Gaza
+2025-05-04 11:53:34,863 - DawnScraper - INFO - Saving article: Gunmen intercept prison van in Kalat, kidnap five policemen
+2025-05-04 11:53:34,863 - DawnScraper - INFO - Saved article: Gunmen intercept prison van in Kalat, kidnap five policemen
+2025-05-04 11:53:36,229 - DawnScraper - INFO - Saving article: AJK ramps up flour supply to LoC areas amid tensions
+2025-05-04 11:53:36,229 - DawnScraper - INFO - Saved article: AJK ramps up flour supply to LoC areas amid tensions
+2025-05-04 11:53:37,490 - DawnScraper - INFO - Saving article: Pro-Pakistan demo outside Indian High Commission in London
+2025-05-04 11:53:37,491 - DawnScraper - INFO - Saved article: Pro-Pakistan demo outside Indian High Commission in London
+2025-05-04 11:53:38,766 - DawnScraper - INFO - Saving article: Karachi water crisis persists as KWSC struggles to repair damaged pipeline
+2025-05-04 11:53:38,767 - DawnScraper - INFO - Saved article: Karachi water crisis persists as KWSC struggles to repair damaged pipeline
+2025-05-04 11:53:38,767 - DawnScraper - INFO - Successfully scraped 5 articles
+
+2025-05-04 11:53:38,790 - DawnNewsReader - INFO - Starting TTS with voice: Matthew
+2025-05-04 11:53:38,829 - DawnNewsReader - ERROR - Process error: Command '['python', 'polly_tts.py', '--voice', 'Matthew']' returned non-zero exit status 1. - Traceback (most recent call last):
+  File "/Users/fatimatuzzahra/Documents/BlueBlack/polly_tts.py", line 8, in <module>
+    import boto3
+ModuleNotFoundError: No module named 'boto3'
+
+2025-05-04 11:53:38,829 - werkzeug - INFO - 127.0.0.1 - - [04/May/2025 11:53:38] "GET /refresh-news?voice=Matthew HTTP/1.1" 200 -
+2025-05-04 11:53:53,599 - DawnNewsReader - INFO - Refresh news request with voice: Matthew
+2025-05-04 11:53:53,601 - DawnNewsReader - INFO - Starting news scraper...
+2025-05-04 11:54:00,231 - DawnNewsReader - WARNING - Scraper warnings: 2025-05-04 11:53:53,847 - DawnScraper - INFO - Dawn News Scraper initialized
+2025-05-04 11:53:53,848 - DawnScraper - INFO - Starting Dawn News scraping job
+2025-05-04 11:53:55,110 - DawnScraper - INFO - Found 177 headlines
+2025-05-04 11:53:56,422 - DawnScraper - INFO - Saving article: 6 Palestinians killed as Israel continues bombarding Gaza
+2025-05-04 11:53:56,422 - DawnScraper - INFO - Saved article: 6 Palestinians killed as Israel continues bombarding Gaza
+2025-05-04 11:53:57,849 - DawnScraper - INFO - Saving article: Gunmen intercept prison van in Kalat, kidnap five policemen
+2025-05-04 11:53:57,850 - DawnScraper - INFO - Saved article: Gunmen intercept prison van in Kalat, kidnap five policemen
+2025-05-04 11:53:59,065 - DawnScraper - INFO - Saving article: AJK ramps up flour supply to LoC areas amid tensions
+2025-05-04 11:53:59,065 - DawnScraper - INFO - Saved article: AJK ramps up flour supply to LoC areas amid tensions
+2025-05-04 11:53:59,613 - DawnScraper - INFO - Saving article: Pro-Pakistan demo outside Indian High Commission in London
+2025-05-04 11:53:59,614 - DawnScraper - INFO - Saved article: Pro-Pakistan demo outside Indian High Commission in London
+2025-05-04 11:54:00,203 - DawnScraper - INFO - Saving article: Karachi water crisis persists as KWSC struggles to repair damaged pipeline
+2025-05-04 11:54:00,205 - DawnScraper - INFO - Saved article: Karachi water crisis persists as KWSC struggles to repair damaged pipeline
+2025-05-04 11:54:00,205 - DawnScraper - INFO - Successfully scraped 5 articles
+
+2025-05-04 11:54:00,231 - DawnNewsReader - INFO - Starting TTS with voice: Matthew
+2025-05-04 11:54:00,286 - DawnNewsReader - ERROR - Process error: Command '['python', 'polly_tts.py', '--voice', 'Matthew']' returned non-zero exit status 1. - Traceback (most recent call last):
+  File "/Users/fatimatuzzahra/Documents/BlueBlack/polly_tts.py", line 8, in <module>
+    import boto3
+ModuleNotFoundError: No module named 'boto3'
+
+2025-05-04 11:54:00,286 - werkzeug - INFO - 127.0.0.1 - - [04/May/2025 11:54:00] "GET /refresh-news?voice=Matthew HTTP/1.1" 200 -
+2025-05-04 11:54:50,401 - DawnNewsReader - INFO - Starting scheduler thread
+2025-05-04 11:54:50,402 - DawnNewsReader - INFO - Running scheduled update at 11:54:50
+2025-05-04 11:54:50,406 - DawnNewsReader - INFO - Starting Flask application
+2025-05-04 11:54:50,444 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+2025-05-04 11:54:50,444 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-05-04 11:54:50,454 - werkzeug - INFO -  * Restarting with watchdog (fsevents)
+2025-05-04 11:54:50,664 - DawnNewsReader - INFO - Starting scheduler thread
+2025-05-04 11:54:50,664 - DawnNewsReader - INFO - Running scheduled update at 11:54:50
+2025-05-04 11:54:50,666 - DawnNewsReader - INFO - Starting Flask application
+2025-05-04 11:54:50,680 - werkzeug - WARNING -  * Debugger is active!
+2025-05-04 11:54:50,689 - werkzeug - INFO -  * Debugger PIN: 621-218-403
+2025-05-04 11:54:52,552 - werkzeug - INFO - 127.0.0.1 - - [04/May/2025 11:54:52] "GET / HTTP/1.1" 200 -
+2025-05-04 11:54:52,615 - werkzeug - INFO - 127.0.0.1 - - [04/May/2025 11:54:52] "GET /available-voices HTTP/1.1" 200 -
+2025-05-04 11:54:52,617 - werkzeug - INFO - 127.0.0.1 - - [04/May/2025 11:54:52] "GET /api/top-headlines HTTP/1.1" 200 -
+2025-05-04 11:54:52,618 - DawnNewsReader - INFO - Using latest summary file: audio_summary_202505040213.json
+2025-05-04 11:54:52,626 - DawnNewsReader - INFO - Retrieved 5 articles
+2025-05-04 11:54:52,627 - werkzeug - INFO - 127.0.0.1 - - [04/May/2025 11:54:52] "GET /api/news HTTP/1.1" 200 -
+2025-05-04 11:54:52,879 - werkzeug - INFO - 127.0.0.1 - - [04/May/2025 11:54:52] "[35m[1mGET /news_audio/Warren_Buffett_to_step_down_as_Berkshire_CEO__Vice_Chairman_Abel_to_take_over_202505040213.mp3 HTTP/1.1[0m" 206 -
+2025-05-04 11:54:52,879 - werkzeug - INFO - 127.0.0.1 - - [04/May/2025 11:54:52] "[35m[1mGET /news_audio/Three_babies_among_11_killed_in_Israel_attack_on_Khan_Younis_202505040213.mp3 HTTP/1.1[0m" 206 -
+2025-05-04 11:54:52,879 - werkzeug - INFO - 127.0.0.1 - - [04/May/2025 11:54:52] "[35m[1mGET /news_audio/Pakistan_envoy_to_US_calls_on_world_to_resolve_Kashmir_dispute__terms_it__core_issue__of_enmity_with_India_202505040213.mp3 HTTP/1.1[0m" 206 -
+2025-05-04 11:54:52,879 - werkzeug - INFO - 127.0.0.1 - - [04/May/2025 11:54:52] "[35m[1mGET /news_audio/Pakistan_envoy_to_US_calls_on_world_to_resolve_Kashmir_dispute__terms_it__core_issue__of_enmity_with_India_202505040213.mp3 HTTP/1.1[0m" 206 -
+2025-05-04 11:54:52,885 - werkzeug - INFO - 127.0.0.1 - - [04/May/2025 11:54:52] "[35m[1mGET /news_audio/Warren_Buffett_to_step_down_as_Berkshire_CEO__Vice_Chairman_Abel_to_take_over_202505040213.mp3 HTTP/1.1[0m" 206 -
+2025-05-04 11:54:52,887 - werkzeug - INFO - 127.0.0.1 - - [04/May/2025 11:54:52] "[35m[1mGET /news_audio/Three_babies_among_11_killed_in_Israel_attack_on_Khan_Younis_202505040213.mp3 HTTP/1.1[0m" 206 -
+2025-05-04 11:54:52,888 - werkzeug - INFO - 127.0.0.1 - - [04/May/2025 11:54:52] "[35m[1mGET /news_audio/Pakistan_envoy_to_US_calls_on_world_to_resolve_Kashmir_dispute__terms_it__core_issue__of_enmity_with_India_202505040213.mp3 HTTP/1.1[0m" 206 -
+2025-05-04 11:54:52,888 - werkzeug - INFO - 127.0.0.1 - - [04/May/2025 11:54:52] "[35m[1mGET /news_audio/Pakistan_envoy_to_US_calls_on_world_to_resolve_Kashmir_dispute__terms_it__core_issue__of_enmity_with_India_202505040213.mp3 HTTP/1.1[0m" 206 -
+2025-05-04 11:54:52,891 - werkzeug - INFO - 127.0.0.1 - - [04/May/2025 11:54:52] "[35m[1mGET /news_audio/Pakistan_envoy_to_US_calls_on_world_to_resolve_Kashmir_dispute__terms_it__core_issue__of_enmity_with_India_202505040213.mp3 HTTP/1.1[0m" 206 -
+2025-05-04 11:54:52,923 - werkzeug - INFO - 127.0.0.1 - - [04/May/2025 11:54:52] "[35m[1mGET /news_audio/Pakistan_envoy_to_US_calls_on_world_to_resolve_Kashmir_dispute__terms_it__core_issue__of_enmity_with_India_202505040213.mp3 HTTP/1.1[0m" 206 -
+2025-05-04 11:54:54,541 - DawnNewsReader - INFO - Refresh news request with voice: Matthew
+2025-05-04 11:54:54,541 - DawnNewsReader - INFO - Starting news scraper...
+2025-05-04 11:54:57,334 - DawnNewsReader - INFO - Using voice for scheduled update: Brian
+2025-05-04 11:54:58,261 - DawnNewsReader - INFO - Using voice for scheduled update: Brian
+2025-05-04 11:55:02,249 - DawnNewsReader - WARNING - Scraper warnings: 2025-05-04 11:54:54,733 - DawnScraper - INFO - Dawn News Scraper initialized
+2025-05-04 11:54:54,733 - DawnScraper - INFO - Starting Dawn News scraping job
+2025-05-04 11:54:56,176 - DawnScraper - INFO - Found 177 headlines
+2025-05-04 11:54:57,491 - DawnScraper - INFO - Saving article: 6 Palestinians killed as Israel continues bombarding Gaza
+2025-05-04 11:54:57,492 - DawnScraper - INFO - Saved article: 6 Palestinians killed as Israel continues bombarding Gaza
+2025-05-04 11:54:58,809 - DawnScraper - INFO - Saving article: Gunmen intercept prison van in Kalat, kidnap five policemen
+2025-05-04 11:54:58,809 - DawnScraper - INFO - Saved article: Gunmen intercept prison van in Kalat, kidnap five policemen
+2025-05-04 11:55:00,056 - DawnScraper - INFO - Saving article: AJK ramps up flour supply to LoC areas amid tensions
+2025-05-04 11:55:00,057 - DawnScraper - INFO - Saved article: AJK ramps up flour supply to LoC areas amid tensions
+2025-05-04 11:55:01,292 - DawnScraper - INFO - Saving article: Pro-Pakistan demo outside Indian High Commission in London
+2025-05-04 11:55:01,293 - DawnScraper - INFO - Saved article: Pro-Pakistan demo outside Indian High Commission in London
+2025-05-04 11:55:02,226 - DawnScraper - INFO - Saving article: Karachi water crisis persists as KWSC struggles to repair damaged pipeline
+2025-05-04 11:55:02,227 - DawnScraper - INFO - Saved article: Karachi water crisis persists as KWSC struggles to repair damaged pipeline
+2025-05-04 11:55:02,227 - DawnScraper - INFO - Successfully scraped 5 articles
+
+2025-05-04 11:55:02,249 - DawnNewsReader - INFO - Starting TTS with voice: Matthew
+2025-05-04 11:55:05,344 - DawnNewsReader - INFO - Starting video generation for scheduled update...
+2025-05-04 11:55:05,344 - DIDVideoGenerator - INFO - D-ID Video Generator initialized
+2025-05-04 11:55:05,345 - DIDVideoGenerator - INFO - Creating video for news article: 6 Palestinians killed as Israel continues bombarding Gaza
+2025-05-04 11:55:05,346 - DIDVideoGenerator - INFO - Using audio file: news_audio/6_Palestinians_killed_as_Israel_continues_bombarding_Gaza_202505041154.mp3
+2025-05-04 11:55:05,346 - DIDVideoGenerator - INFO - Using script text from: news_audio/6_Palestinians_killed_as_Israel_continues_bombarding_Gaza_202505041154_script.txt
+2025-05-04 11:55:05,346 - DIDVideoGenerator - INFO - Sending request to D-ID API
+2025-05-04 11:55:05,346 - DIDVideoGenerator - INFO - Headers: {'Authorization': 'Basic WVhOdFlXbHRjbUZ1WTJoaGRXUm9jbmxBWjIxaGFXd3VZMjl0OnlfU1M5WW9mWVVkbGs1MHV4NnlnVg==', 'Content-Type': 'application/json', 'accept': 'application/json'}
+2025-05-04 11:55:05,346 - DIDVideoGenerator - INFO - Payload snippet: {"script": {"type": "text", "input": "Welcome to Dawn News. 6 Palestinians killed as Israel continues bombarding Gaza.  October 7, 2023: Israel begins bombarding Gaza in retaliation to Hamas attacks Israel resumes massive attacks on March 18, killing over 400 in a day \u2014 two months after ceasefire ending 15 months of relentless attacks began Future governance of Gaza remains unclear as Trump suggests US takeover but Arab countries propose alternative plan, which UK, others back Hamas and Isr...
+2025-05-04 11:55:05,868 - DawnNewsReader - INFO - Starting video generation for scheduled update...
+2025-05-04 11:55:05,868 - DIDVideoGenerator - INFO - D-ID Video Generator initialized
+2025-05-04 11:55:05,869 - DIDVideoGenerator - INFO - Creating video for news article: 6 Palestinians killed as Israel continues bombarding Gaza
+2025-05-04 11:55:05,869 - DIDVideoGenerator - INFO - Using audio file: news_audio/6_Palestinians_killed_as_Israel_continues_bombarding_Gaza_202505041155.mp3
+2025-05-04 11:55:05,869 - DIDVideoGenerator - INFO - Using script text from: news_audio/6_Palestinians_killed_as_Israel_continues_bombarding_Gaza_202505041155_script.txt
+2025-05-04 11:55:05,869 - DIDVideoGenerator - INFO - Sending request to D-ID API
+2025-05-04 11:55:05,869 - DIDVideoGenerator - INFO - Headers: {'Authorization': 'Basic WVhOdFlXbHRjbUZ1WTJoaGRXUm9jbmxBWjIxaGFXd3VZMjl0OnlfU1M5WW9mWVVkbGs1MHV4NnlnVg==', 'Content-Type': 'application/json', 'accept': 'application/json'}
+2025-05-04 11:55:05,869 - DIDVideoGenerator - INFO - Payload snippet: {"script": {"type": "text", "input": "Welcome to Dawn News. 6 Palestinians killed as Israel continues bombarding Gaza.  October 7, 2023: Israel begins bombarding Gaza in retaliation to Hamas attacks Israel resumes massive attacks on March 18, killing over 400 in a day \u2014 two months after ceasefire ending 15 months of relentless attacks began Future governance of Gaza remains unclear as Trump suggests US takeover but Arab countries propose alternative plan, which UK, others back Hamas and Isr...
+2025-05-04 11:55:07,556 - DIDVideoGenerator - INFO - Response status code: 402
+2025-05-04 11:55:07,556 - DIDVideoGenerator - INFO - Response headers: {'Date': 'Sun, 04 May 2025 06:55:07 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '70', 'Connection': 'keep-alive', 'x-amzn-RequestId': 'ddd0716b-ce5a-460a-b012-5df202f05fc7', 'x-amzn-Remapped-content-length': '70', 'x-amz-apigw-id': 'KB9TtFCxvHcEn-w=', 'vary': 'Origin', 'etag': 'W/"46-9EJGiI9zMBRUfhDHI06yPQfkP7Q"', 'x-powered-by': 'Express', 'X-Amzn-Trace-Id': 'Root=1-68170f4a-0154c0fb38a359c67a70a46b'}
+2025-05-04 11:55:07,557 - DIDVideoGenerator - INFO - Response text: {"kind":"InsufficientCreditsError","description":"not enough credits"}
+2025-05-04 11:55:07,557 - DIDVideoGenerator - WARNING - Your D-ID account has insufficient credits. Please add credits to your account or use a different video generation service.
+2025-05-04 11:55:07,560 - DIDVideoGenerator - INFO - Creating video for news article: Gunmen intercept prison van in Kalat, kidnap five policemen
+2025-05-04 11:55:07,560 - DIDVideoGenerator - INFO - Using audio file: news_audio/Gunmen_intercept_prison_van_in_Kalat__kidnap_five_policemen_202505041155.mp3
+2025-05-04 11:55:07,560 - DIDVideoGenerator - INFO - Using script text from: news_audio/Gunmen_intercept_prison_van_in_Kalat__kidnap_five_policemen_202505041155_script.txt
+2025-05-04 11:55:07,560 - DIDVideoGenerator - INFO - Sending request to D-ID API
+2025-05-04 11:55:07,560 - DIDVideoGenerator - INFO - Headers: {'Authorization': 'Basic WVhOdFlXbHRjbUZ1WTJoaGRXUm9jbmxBWjIxaGFXd3VZMjl0OnlfU1M5WW9mWVVkbGs1MHV4NnlnVg==', 'Content-Type': 'application/json', 'accept': 'application/json'}
+2025-05-04 11:55:07,560 - DIDVideoGenerator - INFO - Payload snippet: {"script": {"type": "text", "input": "Welcome to Dawn News. Gunmen intercept prison van in Kalat, kidnap five policemen. Sadly, New Delhi remains committed to its dubious goal of isolating Pakistan in the shadow of the Pahalgam episode. QUETTA: Gunmen on Saturday freed 10 prisoners, including two convicts and took five police officials captive after they erected a roadblock near Mangocher on the Quetta-Karachi highway and intercepted the vehicle transporting prisoners to Quetta from Gadani jail....
+2025-05-04 11:55:07,791 - DawnNewsReader - WARNING - TTS warnings: 2025-05-04 11:55:02,428 - AmazonPollyTTS - INFO - AWS credentials loaded successfully
+2025-05-04 11:55:02,475 - AmazonPollyTTS - INFO - Amazon Polly client initialized successfully
+2025-05-04 11:55:02,476 - AmazonPollyTTS - INFO - Found article file: scraped_news/6_Palestinians_killed_as_Israel_continues_bombarding_Gaza_202505041154.json
+2025-05-04 11:55:02,476 - AmazonPollyTTS - INFO - Found article file: scraped_news/Gunmen_intercept_prison_van_in_Kalat__kidnap_five_policemen_202505041154.json
+2025-05-04 11:55:02,477 - AmazonPollyTTS - INFO - Found article file: scraped_news/AJK_ramps_up_flour_supply_to_LoC_areas_amid_tensions_202505041155.json
+2025-05-04 11:55:02,478 - AmazonPollyTTS - INFO - Found article file: scraped_news/Pro_Pakistan_demo_outside_Indian_High_Commission_in_London_202505041155.json
+2025-05-04 11:55:02,479 - AmazonPollyTTS - INFO - Found article file: scraped_news/Karachi_water_crisis_persists_as_KWSC_struggles_to_repair_damaged_pipeline_202505041155.json
+2025-05-04 11:55:02,479 - AmazonPollyTTS - INFO - Found 5 articles to process
+2025-05-04 11:55:02,479 - AmazonPollyTTS - INFO - Using voice: Matthew
+2025-05-04 11:55:02,479 - AmazonPollyTTS - INFO - Processing article: 6 Palestinians killed as Israel continues bombarding Gaza
+2025-05-04 11:55:02,479 - AmazonPollyTTS - INFO - Created script for article: 6 Palestinians killed as Israel continues bombarding Gaza - Script length: 715 chars
+2025-05-04 11:55:03,488 - AmazonPollyTTS - INFO - Successfully generated audio with Amazon Polly
+2025-05-04 11:55:04,242 - AmazonPollyTTS - INFO - Generated audio for: 6 Palestinians killed as Israel continues bombarding Gaza - Saved to: news_audio/6_Palestinians_killed_as_Israel_continues_bombarding_Gaza_202505041155.mp3
+2025-05-04 11:55:04,243 - AmazonPollyTTS - INFO - Processing article: Gunmen intercept prison van in Kalat, kidnap five policemen
+2025-05-04 11:55:04,243 - AmazonPollyTTS - INFO - Created script for article: Gunmen intercept prison van in Kalat, kidnap five policemen - Script length: 1094 chars
+2025-05-04 11:55:04,498 - AmazonPollyTTS - INFO - Successfully generated audio with Amazon Polly
+2025-05-04 11:55:05,049 - AmazonPollyTTS - INFO - Generated audio for: Gunmen intercept prison van in Kalat, kidnap five policemen - Saved to: news_audio/Gunmen_intercept_prison_van_in_Kalat__kidnap_five_policemen_202505041155.mp3
+2025-05-04 11:55:05,050 - AmazonPollyTTS - INFO - Processing article: AJK ramps up flour supply to LoC areas amid tensions
+2025-05-04 11:55:05,050 - AmazonPollyTTS - INFO - Created script for article: AJK ramps up flour supply to LoC areas amid tensions - Script length: 1514 chars
+2025-05-04 11:55:05,289 - AmazonPollyTTS - INFO - Successfully generated audio with Amazon Polly
+2025-05-04 11:55:06,019 - AmazonPollyTTS - INFO - Generated audio for: AJK ramps up flour supply to LoC areas amid tensions - Saved to: news_audio/AJK_ramps_up_flour_supply_to_LoC_areas_amid_tensions_202505041155.mp3
+2025-05-04 11:55:06,019 - AmazonPollyTTS - INFO - Processing article: Pro-Pakistan demo outside Indian High Commission in London
+2025-05-04 11:55:06,019 - AmazonPollyTTS - INFO - Created script for article: Pro-Pakistan demo outside Indian High Commission in London - Script length: 1146 chars
+2025-05-04 11:55:06,269 - AmazonPollyTTS - INFO - Successfully generated audio with Amazon Polly
+2025-05-04 11:55:06,893 - AmazonPollyTTS - INFO - Generated audio for: Pro-Pakistan demo outside Indian High Commission in London - Saved to: news_audio/Pro_Pakistan_demo_outside_Indian_High_Commission_in_London_202505041155.mp3
+2025-05-04 11:55:06,894 - AmazonPollyTTS - INFO - Processing article: Karachi water crisis persists as KWSC struggles to repair damaged pipeline
+2025-05-04 11:55:06,894 - AmazonPollyTTS - INFO - Created script for article: Karachi water crisis persists as KWSC struggles to repair damaged pipeline - Script length: 1116 chars
+2025-05-04 11:55:07,138 - AmazonPollyTTS - INFO - Successfully generated audio with Amazon Polly
+2025-05-04 11:55:07,715 - AmazonPollyTTS - INFO - Generated audio for: Karachi water crisis persists as KWSC struggles to repair damaged pipeline - Saved to: news_audio/Karachi_water_crisis_persists_as_KWSC_struggles_to_repair_damaged_pipeline_202505041155.mp3
+2025-05-04 11:55:07,717 - AmazonPollyTTS - INFO - Processed 5 articles with voice Matthew - Summary saved to news_audio/audio_summary_202505041155.json
+
+2025-05-04 11:55:07,791 - DawnNewsReader - INFO - Starting video generation...
+2025-05-04 11:55:07,791 - DIDVideoGenerator - INFO - D-ID Video Generator initialized
+2025-05-04 11:55:07,792 - DIDVideoGenerator - INFO - Creating video for news article: 6 Palestinians killed as Israel continues bombarding Gaza
+2025-05-04 11:55:07,792 - DIDVideoGenerator - INFO - Using audio file: news_audio/6_Palestinians_killed_as_Israel_continues_bombarding_Gaza_202505041155.mp3
+2025-05-04 11:55:07,792 - DIDVideoGenerator - INFO - Using script text from: news_audio/6_Palestinians_killed_as_Israel_continues_bombarding_Gaza_202505041155_script.txt
+2025-05-04 11:55:07,792 - DIDVideoGenerator - INFO - Sending request to D-ID API
+2025-05-04 11:55:07,792 - DIDVideoGenerator - INFO - Headers: {'Authorization': 'Basic WVhOdFlXbHRjbUZ1WTJoaGRXUm9jbmxBWjIxaGFXd3VZMjl0OnlfU1M5WW9mWVVkbGs1MHV4NnlnVg==', 'Content-Type': 'application/json', 'accept': 'application/json'}
+2025-05-04 11:55:07,792 - DIDVideoGenerator - INFO - Payload snippet: {"script": {"type": "text", "input": "Welcome to Dawn News. 6 Palestinians killed as Israel continues bombarding Gaza.  October 7, 2023: Israel begins bombarding Gaza in retaliation to Hamas attacks Israel resumes massive attacks on March 18, killing over 400 in a day \u2014 two months after ceasefire ending 15 months of relentless attacks began Future governance of Gaza remains unclear as Trump suggests US takeover but Arab countries propose alternative plan, which UK, others back Hamas and Isr...
+2025-05-04 11:55:07,859 - DIDVideoGenerator - INFO - Response status code: 402
+2025-05-04 11:55:07,859 - DIDVideoGenerator - INFO - Response headers: {'Date': 'Sun, 04 May 2025 06:55:07 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '70', 'Connection': 'keep-alive', 'x-amzn-RequestId': '4d4d4d6a-6fb1-43d0-85ca-53227971b8b8', 'x-amzn-Remapped-content-length': '70', 'x-amz-apigw-id': 'KB9TwFK3vHcEjWQ=', 'vary': 'Origin', 'etag': 'W/"46-9EJGiI9zMBRUfhDHI06yPQfkP7Q"', 'x-powered-by': 'Express', 'X-Amzn-Trace-Id': 'Root=1-68170f4a-648783765053ecea387a3aad'}
+2025-05-04 11:55:07,859 - DIDVideoGenerator - INFO - Response text: {"kind":"InsufficientCreditsError","description":"not enough credits"}
+2025-05-04 11:55:07,859 - DIDVideoGenerator - WARNING - Your D-ID account has insufficient credits. Please add credits to your account or use a different video generation service.
+2025-05-04 11:55:07,859 - DIDVideoGenerator - INFO - Creating video for news article: Gunmen intercept prison van in Kalat, kidnap five policemen
+2025-05-04 11:55:07,859 - DIDVideoGenerator - INFO - Using audio file: news_audio/Gunmen_intercept_prison_van_in_Kalat__kidnap_five_policemen_202505041155.mp3
+2025-05-04 11:55:07,860 - DIDVideoGenerator - INFO - Using script text from: news_audio/Gunmen_intercept_prison_van_in_Kalat__kidnap_five_policemen_202505041155_script.txt
+2025-05-04 11:55:07,860 - DIDVideoGenerator - INFO - Sending request to D-ID API
+2025-05-04 11:55:07,860 - DIDVideoGenerator - INFO - Headers: {'Authorization': 'Basic WVhOdFlXbHRjbUZ1WTJoaGRXUm9jbmxBWjIxaGFXd3VZMjl0OnlfU1M5WW9mWVVkbGs1MHV4NnlnVg==', 'Content-Type': 'application/json', 'accept': 'application/json'}
+2025-05-04 11:55:07,860 - DIDVideoGenerator - INFO - Payload snippet: {"script": {"type": "text", "input": "Welcome to Dawn News. Gunmen intercept prison van in Kalat, kidnap five policemen. Sadly, New Delhi remains committed to its dubious goal of isolating Pakistan in the shadow of the Pahalgam episode. QUETTA: Gunmen on Saturday freed 10 prisoners, including two convicts and took five police officials captive after they erected a roadblock near Mangocher on the Quetta-Karachi highway and intercepted the vehicle transporting prisoners to Quetta from Gadani jail....
+2025-05-04 11:55:08,508 - DIDVideoGenerator - INFO - Response status code: 402
+2025-05-04 11:55:08,511 - DIDVideoGenerator - INFO - Response headers: {'Date': 'Sun, 04 May 2025 06:55:08 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '70', 'Connection': 'keep-alive', 'x-amzn-RequestId': 'ad81a435-b3cb-4e60-ba87-b7cfa5294330', 'x-amzn-Remapped-content-length': '70', 'x-amz-apigw-id': 'KB9UBE2CPHcEkPw=', 'vary': 'Origin', 'etag': 'W/"46-9EJGiI9zMBRUfhDHI06yPQfkP7Q"', 'x-powered-by': 'Express', 'X-Amzn-Trace-Id': 'Root=1-68170f4c-14ae15ee24ab5cdb67123096'}
+2025-05-04 11:55:08,511 - DIDVideoGenerator - INFO - Response text: {"kind":"InsufficientCreditsError","description":"not enough credits"}
+2025-05-04 11:55:08,511 - DIDVideoGenerator - WARNING - Your D-ID account has insufficient credits. Please add credits to your account or use a different video generation service.
+2025-05-04 11:55:08,512 - DIDVideoGenerator - INFO - Creating video for news article: AJK ramps up flour supply to LoC areas amid tensions
+2025-05-04 11:55:08,512 - DIDVideoGenerator - INFO - Using audio file: news_audio/AJK_ramps_up_flour_supply_to_LoC_areas_amid_tensions_202505041155.mp3
+2025-05-04 11:55:08,512 - DIDVideoGenerator - INFO - Using script text from: news_audio/AJK_ramps_up_flour_supply_to_LoC_areas_amid_tensions_202505041155_script.txt
+2025-05-04 11:55:08,512 - DIDVideoGenerator - INFO - Sending request to D-ID API
+2025-05-04 11:55:08,512 - DIDVideoGenerator - INFO - Headers: {'Authorization': 'Basic WVhOdFlXbHRjbUZ1WTJoaGRXUm9jbmxBWjIxaGFXd3VZMjl0OnlfU1M5WW9mWVVkbGs1MHV4NnlnVg==', 'Content-Type': 'application/json', 'accept': 'application/json'}
+2025-05-04 11:55:08,512 - DIDVideoGenerator - INFO - Payload snippet: {"script": {"type": "text", "input": "Welcome to Dawn News. AJK ramps up flour supply to LoC areas amid tensions. Sadly, New Delhi remains committed to its dubious goal of isolating Pakistan in the shadow of the Pahalgam episode. \u2022 Steps up efforts to ensure two-month flour reserves in vulnerable regions\n\u2022 Food depots being relocated from exposed areas to safer zones\n\u2022 Officials asked to develop contingency plans to ensure uninterrupted food supply MUZAFFARABAD: The Food Departm...
+2025-05-04 11:55:08,831 - DIDVideoGenerator - INFO - Response status code: 402
+2025-05-04 11:55:08,832 - DIDVideoGenerator - INFO - Response headers: {'Date': 'Sun, 04 May 2025 06:55:08 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '70', 'Connection': 'keep-alive', 'x-amzn-RequestId': 'f4381223-9878-43c7-b70c-1713c0fb53d3', 'x-amzn-Remapped-content-length': '70', 'x-amz-apigw-id': 'KB9UEGC_vHcEp1g=', 'vary': 'Origin', 'etag': 'W/"46-9EJGiI9zMBRUfhDHI06yPQfkP7Q"', 'x-powered-by': 'Express', 'X-Amzn-Trace-Id': 'Root=1-68170f4c-182977ef5d7f00f2576d554b'}
+2025-05-04 11:55:08,833 - DIDVideoGenerator - INFO - Response text: {"kind":"InsufficientCreditsError","description":"not enough credits"}
+2025-05-04 11:55:08,833 - DIDVideoGenerator - WARNING - Your D-ID account has insufficient credits. Please add credits to your account or use a different video generation service.
+2025-05-04 11:55:08,834 - DIDVideoGenerator - INFO - Creating video for news article: AJK ramps up flour supply to LoC areas amid tensions
+2025-05-04 11:55:08,835 - DIDVideoGenerator - INFO - Using audio file: news_audio/AJK_ramps_up_flour_supply_to_LoC_areas_amid_tensions_202505041155.mp3
+2025-05-04 11:55:08,835 - DIDVideoGenerator - INFO - Using script text from: news_audio/AJK_ramps_up_flour_supply_to_LoC_areas_amid_tensions_202505041155_script.txt
+2025-05-04 11:55:08,835 - DIDVideoGenerator - INFO - Sending request to D-ID API
+2025-05-04 11:55:08,835 - DIDVideoGenerator - INFO - Headers: {'Authorization': 'Basic WVhOdFlXbHRjbUZ1WTJoaGRXUm9jbmxBWjIxaGFXd3VZMjl0OnlfU1M5WW9mWVVkbGs1MHV4NnlnVg==', 'Content-Type': 'application/json', 'accept': 'application/json'}
+2025-05-04 11:55:08,835 - DIDVideoGenerator - INFO - Payload snippet: {"script": {"type": "text", "input": "Welcome to Dawn News. AJK ramps up flour supply to LoC areas amid tensions. Sadly, New Delhi remains committed to its dubious goal of isolating Pakistan in the shadow of the Pahalgam episode. \u2022 Steps up efforts to ensure two-month flour reserves in vulnerable regions\n\u2022 Food depots being relocated from exposed areas to safer zones\n\u2022 Officials asked to develop contingency plans to ensure uninterrupted food supply MUZAFFARABAD: The Food Departm...
+2025-05-04 11:55:08,912 - DIDVideoGenerator - INFO - Response status code: 402
+2025-05-04 11:55:08,913 - DIDVideoGenerator - INFO - Response headers: {'Date': 'Sun, 04 May 2025 06:55:09 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '70', 'Connection': 'keep-alive', 'x-amzn-RequestId': 'b4527a43-c0c3-4fe3-ac50-0f7c53623794', 'x-amzn-Remapped-content-length': '70', 'x-amz-apigw-id': 'KB9UEHZ0PHcEkCw=', 'vary': 'Origin', 'etag': 'W/"46-9EJGiI9zMBRUfhDHI06yPQfkP7Q"', 'x-powered-by': 'Express', 'X-Amzn-Trace-Id': 'Root=1-68170f4c-583a86ee29bc08e5412c23ec'}
+2025-05-04 11:55:08,913 - DIDVideoGenerator - INFO - Response text: {"kind":"InsufficientCreditsError","description":"not enough credits"}
+2025-05-04 11:55:08,913 - DIDVideoGenerator - WARNING - Your D-ID account has insufficient credits. Please add credits to your account or use a different video generation service.
+2025-05-04 11:55:08,914 - DIDVideoGenerator - INFO - Video already exists: news_videos/Gunmen_intercept_prison_van_in_Kalat__kidnap_five_policemen_202505041155.mp4
+2025-05-04 11:55:08,915 - DIDVideoGenerator - INFO - Creating video for news article: AJK ramps up flour supply to LoC areas amid tensions
+2025-05-04 11:55:08,915 - DIDVideoGenerator - INFO - Using audio file: news_audio/AJK_ramps_up_flour_supply_to_LoC_areas_amid_tensions_202505041155.mp3
+2025-05-04 11:55:08,915 - DIDVideoGenerator - INFO - Using script text from: news_audio/AJK_ramps_up_flour_supply_to_LoC_areas_amid_tensions_202505041155_script.txt
+2025-05-04 11:55:08,915 - DIDVideoGenerator - INFO - Sending request to D-ID API
+2025-05-04 11:55:08,915 - DIDVideoGenerator - INFO - Headers: {'Authorization': 'Basic WVhOdFlXbHRjbUZ1WTJoaGRXUm9jbmxBWjIxaGFXd3VZMjl0OnlfU1M5WW9mWVVkbGs1MHV4NnlnVg==', 'Content-Type': 'application/json', 'accept': 'application/json'}
+2025-05-04 11:55:08,916 - DIDVideoGenerator - INFO - Payload snippet: {"script": {"type": "text", "input": "Welcome to Dawn News. AJK ramps up flour supply to LoC areas amid tensions. Sadly, New Delhi remains committed to its dubious goal of isolating Pakistan in the shadow of the Pahalgam episode. \u2022 Steps up efforts to ensure two-month flour reserves in vulnerable regions\n\u2022 Food depots being relocated from exposed areas to safer zones\n\u2022 Officials asked to develop contingency plans to ensure uninterrupted food supply MUZAFFARABAD: The Food Departm...
+2025-05-04 11:55:09,485 - DIDVideoGenerator - INFO - Response status code: 402
+2025-05-04 11:55:09,485 - DIDVideoGenerator - INFO - Response headers: {'Date': 'Sun, 04 May 2025 06:55:09 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '70', 'Connection': 'keep-alive', 'x-amzn-RequestId': '60755aa9-cf38-4a8e-b519-3c785a3dcff1', 'x-amzn-Remapped-content-length': '70', 'x-amz-apigw-id': 'KB9ULGcjvHcEkAA=', 'vary': 'Origin', 'etag': 'W/"46-9EJGiI9zMBRUfhDHI06yPQfkP7Q"', 'x-powered-by': 'Express', 'X-Amzn-Trace-Id': 'Root=1-68170f4d-2bddb6980fc1b4c7023a1d91'}
+2025-05-04 11:55:09,486 - DIDVideoGenerator - INFO - Response text: {"kind":"InsufficientCreditsError","description":"not enough credits"}
+2025-05-04 11:55:09,486 - DIDVideoGenerator - WARNING - Your D-ID account has insufficient credits. Please add credits to your account or use a different video generation service.
+2025-05-04 11:55:09,486 - DIDVideoGenerator - INFO - Creating video for news article: Pro-Pakistan demo outside Indian High Commission in London
+2025-05-04 11:55:09,487 - DIDVideoGenerator - INFO - Using audio file: news_audio/Pro_Pakistan_demo_outside_Indian_High_Commission_in_London_202505041155.mp3
+2025-05-04 11:55:09,487 - DIDVideoGenerator - INFO - Using script text from: news_audio/Pro_Pakistan_demo_outside_Indian_High_Commission_in_London_202505041155_script.txt
+2025-05-04 11:55:09,487 - DIDVideoGenerator - INFO - Sending request to D-ID API
+2025-05-04 11:55:09,487 - DIDVideoGenerator - INFO - Headers: {'Authorization': 'Basic WVhOdFlXbHRjbUZ1WTJoaGRXUm9jbmxBWjIxaGFXd3VZMjl0OnlfU1M5WW9mWVVkbGs1MHV4NnlnVg==', 'Content-Type': 'application/json', 'accept': 'application/json'}
+2025-05-04 11:55:09,487 - DIDVideoGenerator - INFO - Payload snippet: {"script": {"type": "text", "input": "Welcome to Dawn News. Pro-Pakistan demo outside Indian High Commission in London. Sadly, New Delhi remains committed to its dubious goal of isolating Pakistan in the shadow of the Pahalgam episode. LONDON: A large pro-Pakistan demonstration was held on Saturday outside the Indian High Commission in Aldwych, London, under the aegis of Pakistan Muslim League-N\u2019s UK chapter.  The protest came in the wake of the deadly April 22 attack in Pahalgam, Occupied ...
+2025-05-04 11:55:09,725 - DIDVideoGenerator - INFO - Response status code: 429
+2025-05-04 11:55:09,726 - DIDVideoGenerator - INFO - Response headers: {'Date': 'Sun, 04 May 2025 06:55:09 GMT', 'Content-Type': 'application/json', 'Content-Length': '32', 'Connection': 'keep-alive', 'x-amzn-RequestId': 'e8bab746-6776-454e-9bfd-780c27261d7e', 'x-amzn-ErrorType': 'TooManyRequestsException', 'x-amz-apigw-id': 'KB9UOH_dvHcEYOg=', 'X-Amzn-Trace-Id': 'Root=1-68170f4d-19de827817fc1c87566f2ada'}
+2025-05-04 11:55:09,726 - DIDVideoGenerator - INFO - Response text: {"message":"Too Many Requests"}
+
+2025-05-04 11:55:09,726 - DIDVideoGenerator - ERROR - HTTP error: 429 Client Error:  for url: https://api.d-id.com/talks
+2025-05-04 11:55:09,726 - DIDVideoGenerator - ERROR - Response: {"message":"Too Many Requests"}
+
+2025-05-04 11:55:09,727 - DIDVideoGenerator - INFO - Creating video for news article: Pro-Pakistan demo outside Indian High Commission in London
+2025-05-04 11:55:09,727 - DIDVideoGenerator - INFO - Using audio file: news_audio/Pro_Pakistan_demo_outside_Indian_High_Commission_in_London_202505041155.mp3
+2025-05-04 11:55:09,728 - DIDVideoGenerator - INFO - Using script text from: news_audio/Pro_Pakistan_demo_outside_Indian_High_Commission_in_London_202505041155_script.txt
+2025-05-04 11:55:09,728 - DIDVideoGenerator - INFO - Sending request to D-ID API
+2025-05-04 11:55:09,728 - DIDVideoGenerator - INFO - Headers: {'Authorization': 'Basic WVhOdFlXbHRjbUZ1WTJoaGRXUm9jbmxBWjIxaGFXd3VZMjl0OnlfU1M5WW9mWVVkbGs1MHV4NnlnVg==', 'Content-Type': 'application/json', 'accept': 'application/json'}
+2025-05-04 11:55:09,728 - DIDVideoGenerator - INFO - Payload snippet: {"script": {"type": "text", "input": "Welcome to Dawn News. Pro-Pakistan demo outside Indian High Commission in London. Sadly, New Delhi remains committed to its dubious goal of isolating Pakistan in the shadow of the Pahalgam episode. LONDON: A large pro-Pakistan demonstration was held on Saturday outside the Indian High Commission in Aldwych, London, under the aegis of Pakistan Muslim League-N\u2019s UK chapter.  The protest came in the wake of the deadly April 22 attack in Pahalgam, Occupied ...
+2025-05-04 11:55:09,830 - DIDVideoGenerator - INFO - Response status code: 429
+2025-05-04 11:55:09,831 - DIDVideoGenerator - INFO - Response headers: {'Date': 'Sun, 04 May 2025 06:55:09 GMT', 'Content-Type': 'application/json', 'Content-Length': '32', 'Connection': 'keep-alive', 'x-amzn-RequestId': '5d71daff-2ca3-4c01-96c3-6adf10dbc8e7', 'x-amzn-ErrorType': 'TooManyRequestsException', 'x-amz-apigw-id': 'KB9UPH13vHcEL-w=', 'X-Amzn-Trace-Id': 'Root=1-68170f4d-397ee34f1b02b23d3a8b8c85'}
+2025-05-04 11:55:09,831 - DIDVideoGenerator - INFO - Response text: {"message":"Too Many Requests"}
+
+2025-05-04 11:55:09,831 - DIDVideoGenerator - ERROR - HTTP error: 429 Client Error:  for url: https://api.d-id.com/talks
+2025-05-04 11:55:09,831 - DIDVideoGenerator - ERROR - Response: {"message":"Too Many Requests"}
+
+2025-05-04 11:55:09,832 - DIDVideoGenerator - INFO - Creating video for news article: Pro-Pakistan demo outside Indian High Commission in London
+2025-05-04 11:55:09,832 - DIDVideoGenerator - INFO - Using audio file: news_audio/Pro_Pakistan_demo_outside_Indian_High_Commission_in_London_202505041155.mp3
+2025-05-04 11:55:09,832 - DIDVideoGenerator - INFO - Using script text from: news_audio/Pro_Pakistan_demo_outside_Indian_High_Commission_in_London_202505041155_script.txt
+2025-05-04 11:55:09,832 - DIDVideoGenerator - INFO - Sending request to D-ID API
+2025-05-04 11:55:09,832 - DIDVideoGenerator - INFO - Headers: {'Authorization': 'Basic WVhOdFlXbHRjbUZ1WTJoaGRXUm9jbmxBWjIxaGFXd3VZMjl0OnlfU1M5WW9mWVVkbGs1MHV4NnlnVg==', 'Content-Type': 'application/json', 'accept': 'application/json'}
+2025-05-04 11:55:09,832 - DIDVideoGenerator - INFO - Payload snippet: {"script": {"type": "text", "input": "Welcome to Dawn News. Pro-Pakistan demo outside Indian High Commission in London. Sadly, New Delhi remains committed to its dubious goal of isolating Pakistan in the shadow of the Pahalgam episode. LONDON: A large pro-Pakistan demonstration was held on Saturday outside the Indian High Commission in Aldwych, London, under the aegis of Pakistan Muslim League-N\u2019s UK chapter.  The protest came in the wake of the deadly April 22 attack in Pahalgam, Occupied ...
+2025-05-04 11:55:10,374 - DIDVideoGenerator - INFO - Response status code: 429
+2025-05-04 11:55:10,375 - DIDVideoGenerator - INFO - Response headers: {'Date': 'Sun, 04 May 2025 06:55:10 GMT', 'Content-Type': 'application/json', 'Content-Length': '32', 'Connection': 'keep-alive', 'x-amzn-RequestId': 'a160b674-9dda-451c-84c0-bf3144707d60', 'x-amzn-ErrorType': 'TooManyRequestsException', 'x-amz-apigw-id': 'KB9UUFdlvHcENTg=', 'X-Amzn-Trace-Id': 'Root=1-68170f4e-49166e9832cee0765fd62a13'}
+2025-05-04 11:55:10,376 - DIDVideoGenerator - INFO - Response text: {"message":"Too Many Requests"}
+
+2025-05-04 11:55:10,377 - DIDVideoGenerator - ERROR - HTTP error: 429 Client Error:  for url: https://api.d-id.com/talks
+2025-05-04 11:55:10,377 - DIDVideoGenerator - ERROR - Response: {"message":"Too Many Requests"}
+
+2025-05-04 11:55:10,377 - DIDVideoGenerator - INFO - Creating video for news article: Karachi water crisis persists as KWSC struggles to repair damaged pipeline
+2025-05-04 11:55:10,377 - DIDVideoGenerator - INFO - Using audio file: news_audio/Karachi_water_crisis_persists_as_KWSC_struggles_to_repair_damaged_pipeline_202505041155.mp3
+2025-05-04 11:55:10,378 - DIDVideoGenerator - INFO - Using script text from: news_audio/Karachi_water_crisis_persists_as_KWSC_struggles_to_repair_damaged_pipeline_202505041155_script.txt
+2025-05-04 11:55:10,378 - DIDVideoGenerator - INFO - Sending request to D-ID API
+2025-05-04 11:55:10,378 - DIDVideoGenerator - INFO - Headers: {'Authorization': 'Basic WVhOdFlXbHRjbUZ1WTJoaGRXUm9jbmxBWjIxaGFXd3VZMjl0OnlfU1M5WW9mWVVkbGs1MHV4NnlnVg==', 'Content-Type': 'application/json', 'accept': 'application/json'}
+2025-05-04 11:55:10,378 - DIDVideoGenerator - INFO - Payload snippet: {"script": {"type": "text", "input": "Welcome to Dawn News. Karachi water crisis persists as KWSC struggles to repair damaged pipeline. Sadly, New Delhi remains committed to its dubious goal of isolating Pakistan in the shadow of the Pahalgam episode. KARACHI: The ongoing water crisis caused by the rupture of an 84-inch main water supply line in the University of Karachi is likely to persist as the Karachi Water and Sewerage Corporation is still struggling to complete the repair work on Saturday...
+2025-05-04 11:55:10,682 - DIDVideoGenerator - INFO - Response status code: 429
+2025-05-04 11:55:10,683 - DIDVideoGenerator - INFO - Response headers: {'Date': 'Sun, 04 May 2025 06:55:10 GMT', 'Content-Type': 'application/json', 'Content-Length': '32', 'Connection': 'keep-alive', 'x-amzn-RequestId': 'b46b0ef8-75ef-4dc5-91b2-d899c55aaa7e', 'x-amzn-ErrorType': 'TooManyRequestsException', 'x-amz-apigw-id': 'KB9UXFRCPHcENtQ=', 'X-Amzn-Trace-Id': 'Root=1-68170f4e-600c60bd0cf142332ac119a6'}
+2025-05-04 11:55:10,683 - DIDVideoGenerator - INFO - Response text: {"message":"Too Many Requests"}
+
+2025-05-04 11:55:10,683 - DIDVideoGenerator - ERROR - HTTP error: 429 Client Error:  for url: https://api.d-id.com/talks
+2025-05-04 11:55:10,683 - DIDVideoGenerator - ERROR - Response: {"message":"Too Many Requests"}
+
+2025-05-04 11:55:10,683 - DIDVideoGenerator - INFO - Creating video for news article: Karachi water crisis persists as KWSC struggles to repair damaged pipeline
+2025-05-04 11:55:10,683 - DIDVideoGenerator - INFO - Using audio file: news_audio/Karachi_water_crisis_persists_as_KWSC_struggles_to_repair_damaged_pipeline_202505041155.mp3
+2025-05-04 11:55:10,683 - DIDVideoGenerator - INFO - Using script text from: news_audio/Karachi_water_crisis_persists_as_KWSC_struggles_to_repair_damaged_pipeline_202505041155_script.txt
+2025-05-04 11:55:10,683 - DIDVideoGenerator - INFO - Sending request to D-ID API
+2025-05-04 11:55:10,683 - DIDVideoGenerator - INFO - Headers: {'Authorization': 'Basic WVhOdFlXbHRjbUZ1WTJoaGRXUm9jbmxBWjIxaGFXd3VZMjl0OnlfU1M5WW9mWVVkbGs1MHV4NnlnVg==', 'Content-Type': 'application/json', 'accept': 'application/json'}
+2025-05-04 11:55:10,683 - DIDVideoGenerator - INFO - Payload snippet: {"script": {"type": "text", "input": "Welcome to Dawn News. Karachi water crisis persists as KWSC struggles to repair damaged pipeline. Sadly, New Delhi remains committed to its dubious goal of isolating Pakistan in the shadow of the Pahalgam episode. KARACHI: The ongoing water crisis caused by the rupture of an 84-inch main water supply line in the University of Karachi is likely to persist as the Karachi Water and Sewerage Corporation is still struggling to complete the repair work on Saturday...
+2025-05-04 11:55:10,706 - DIDVideoGenerator - INFO - Response status code: 429
+2025-05-04 11:55:10,706 - DIDVideoGenerator - INFO - Response headers: {'Date': 'Sun, 04 May 2025 06:55:10 GMT', 'Content-Type': 'application/json', 'Content-Length': '32', 'Connection': 'keep-alive', 'x-amzn-RequestId': '2d55e2a4-89b9-439a-9589-2b69360753f4', 'x-amzn-ErrorType': 'TooManyRequestsException', 'x-amz-apigw-id': 'KB9UYF5-vHcEqQg=', 'X-Amzn-Trace-Id': 'Root=1-68170f4e-1628a7d231f89e4c17a71c56'}
+2025-05-04 11:55:10,706 - DIDVideoGenerator - INFO - Response text: {"message":"Too Many Requests"}
+
+2025-05-04 11:55:10,706 - DIDVideoGenerator - ERROR - HTTP error: 429 Client Error:  for url: https://api.d-id.com/talks
+2025-05-04 11:55:10,706 - DIDVideoGenerator - ERROR - Response: {"message":"Too Many Requests"}
+
+2025-05-04 11:55:10,707 - DIDVideoGenerator - INFO - Creating video for news article: Karachi water crisis persists as KWSC struggles to repair damaged pipeline
+2025-05-04 11:55:10,707 - DIDVideoGenerator - INFO - Using audio file: news_audio/Karachi_water_crisis_persists_as_KWSC_struggles_to_repair_damaged_pipeline_202505041155.mp3
+2025-05-04 11:55:10,707 - DIDVideoGenerator - INFO - Using script text from: news_audio/Karachi_water_crisis_persists_as_KWSC_struggles_to_repair_damaged_pipeline_202505041155_script.txt
+2025-05-04 11:55:10,707 - DIDVideoGenerator - INFO - Sending request to D-ID API
+2025-05-04 11:55:10,707 - DIDVideoGenerator - INFO - Headers: {'Authorization': 'Basic WVhOdFlXbHRjbUZ1WTJoaGRXUm9jbmxBWjIxaGFXd3VZMjl0OnlfU1M5WW9mWVVkbGs1MHV4NnlnVg==', 'Content-Type': 'application/json', 'accept': 'application/json'}
+2025-05-04 11:55:10,707 - DIDVideoGenerator - INFO - Payload snippet: {"script": {"type": "text", "input": "Welcome to Dawn News. Karachi water crisis persists as KWSC struggles to repair damaged pipeline. Sadly, New Delhi remains committed to its dubious goal of isolating Pakistan in the shadow of the Pahalgam episode. KARACHI: The ongoing water crisis caused by the rupture of an 84-inch main water supply line in the University of Karachi is likely to persist as the Karachi Water and Sewerage Corporation is still struggling to complete the repair work on Saturday...
+2025-05-04 11:55:11,306 - DIDVideoGenerator - INFO - Response status code: 429
+2025-05-04 11:55:11,307 - DIDVideoGenerator - INFO - Response headers: {'Date': 'Sun, 04 May 2025 06:55:11 GMT', 'Content-Type': 'application/json', 'Content-Length': '32', 'Connection': 'keep-alive', 'x-amzn-RequestId': '81311e59-2c08-4aa3-a4ea-c4b99776bbaa', 'x-amzn-ErrorType': 'TooManyRequestsException', 'x-amz-apigw-id': 'KB9UeFpUvHcEC6Q=', 'X-Amzn-Trace-Id': 'Root=1-68170f4f-3bbe8a4402e08ff17c7ea770'}
+2025-05-04 11:55:11,307 - DIDVideoGenerator - INFO - Response text: {"message":"Too Many Requests"}
+
+2025-05-04 11:55:11,307 - DIDVideoGenerator - ERROR - HTTP error: 429 Client Error:  for url: https://api.d-id.com/talks
+2025-05-04 11:55:11,308 - DIDVideoGenerator - ERROR - Response: {"message":"Too Many Requests"}
+
+2025-05-04 11:55:11,314 - DIDVideoGenerator - INFO - Processed 0 videos for summary news_audio/audio_summary_202505041155.json
+2025-05-04 11:55:11,314 - DawnNewsReader - INFO - Scheduled update completed successfully
+2025-05-04 11:55:11,314 - DawnNewsReader - INFO - Waiting for next scheduled update in 1 hour
+2025-05-04 11:55:11,623 - DIDVideoGenerator - INFO - Response status code: 429
+2025-05-04 11:55:11,623 - DIDVideoGenerator - INFO - Response status code: 429
+2025-05-04 11:55:11,623 - DIDVideoGenerator - INFO - Response headers: {'Date': 'Sun, 04 May 2025 06:55:11 GMT', 'Content-Type': 'application/json', 'Content-Length': '32', 'Connection': 'keep-alive', 'x-amzn-RequestId': '79dc79bc-472e-46d6-bfff-c0982a2ff717', 'x-amzn-ErrorType': 'TooManyRequestsException', 'x-amz-apigw-id': 'KB9UgFOivHcEjbQ=', 'X-Amzn-Trace-Id': 'Root=1-68170f4f-54ae056821a44e6d2883f799'}
+2025-05-04 11:55:11,623 - DIDVideoGenerator - INFO - Response text: {"message":"Too Many Requests"}
+
+2025-05-04 11:55:11,623 - DIDVideoGenerator - ERROR - HTTP error: 429 Client Error:  for url: https://api.d-id.com/talks
+2025-05-04 11:55:11,623 - DIDVideoGenerator - INFO - Response headers: {'Date': 'Sun, 04 May 2025 06:55:11 GMT', 'Content-Type': 'application/json', 'Content-Length': '32', 'Connection': 'keep-alive', 'x-amzn-RequestId': '57388986-0ea9-4933-80f6-126347edce3d', 'x-amzn-ErrorType': 'TooManyRequestsException', 'x-amz-apigw-id': 'KB9UhEUqvHcEs8w=', 'X-Amzn-Trace-Id': 'Root=1-68170f4f-3224012225dec3d3324ceca8'}
+2025-05-04 11:55:11,623 - DIDVideoGenerator - ERROR - Response: {"message":"Too Many Requests"}
+
+2025-05-04 11:55:11,623 - DIDVideoGenerator - INFO - Response text: {"message":"Too Many Requests"}
+
+2025-05-04 11:55:11,623 - DIDVideoGenerator - ERROR - HTTP error: 429 Client Error:  for url: https://api.d-id.com/talks
+2025-05-04 11:55:11,623 - DIDVideoGenerator - ERROR - Response: {"message":"Too Many Requests"}
+
+2025-05-04 11:55:11,624 - DIDVideoGenerator - INFO - Processed 1 videos for summary news_audio/audio_summary_202505041155.json
+2025-05-04 11:55:11,624 - DawnNewsReader - INFO - News refresh completed successfully
+2025-05-04 11:55:11,624 - DIDVideoGenerator - INFO - Processed 0 videos for summary news_audio/audio_summary_202505041155.json
+2025-05-04 11:55:11,624 - DawnNewsReader - INFO - Scheduled update completed successfully
+2025-05-04 11:55:11,624 - DawnNewsReader - INFO - Waiting for next scheduled update in 1 hour
+2025-05-04 11:55:11,624 - werkzeug - INFO - 127.0.0.1 - - [04/May/2025 11:55:11] "GET /refresh-news?voice=Matthew HTTP/1.1" 200 -
+2025-05-04 11:55:11,628 - DawnNewsReader - INFO - Using latest summary file: audio_summary_202505041155.json
+2025-05-04 11:55:11,629 - DawnNewsReader - ERROR - Error loading news: Extra data: line 27 column 2 (char 1116)
+Traceback (most recent call last):
+  File "/Users/fatimatuzzahra/Documents/BlueBlack/app.py", line 73, in get_news
+    summary = json.load(f)
+              ^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/json/__init__.py", line 293, in load
+    return loads(fp.read(),
+           ^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/json/decoder.py", line 340, in decode
+    raise JSONDecodeError("Extra data", s, end)
+json.decoder.JSONDecodeError: Extra data: line 27 column 2 (char 1116)
+2025-05-04 11:55:11,636 - werkzeug - INFO - 127.0.0.1 - - [04/May/2025 11:55:11] "GET /api/news HTTP/1.1" 200 -
+2025-05-04 11:55:14,809 - DawnNewsReader - INFO - Refresh news request with voice: Matthew
+2025-05-04 11:55:14,810 - DawnNewsReader - INFO - Starting news scraper...
+2025-05-04 11:55:21,774 - DawnNewsReader - WARNING - Scraper warnings: 2025-05-04 11:55:15,038 - DawnScraper - INFO - Dawn News Scraper initialized
+2025-05-04 11:55:15,039 - DawnScraper - INFO - Starting Dawn News scraping job
+2025-05-04 11:55:16,541 - DawnScraper - INFO - Found 177 headlines
+2025-05-04 11:55:17,931 - DawnScraper - INFO - Saving article: 6 Palestinians killed as Israel continues bombarding Gaza
+2025-05-04 11:55:17,931 - DawnScraper - INFO - Saved article: 6 Palestinians killed as Israel continues bombarding Gaza
+2025-05-04 11:55:18,496 - DawnScraper - INFO - Saving article: Gunmen intercept prison van in Kalat, kidnap five policemen
+2025-05-04 11:55:18,496 - DawnScraper - INFO - Saved article: Gunmen intercept prison van in Kalat, kidnap five policemen
+2025-05-04 11:55:19,063 - DawnScraper - INFO - Saving article: AJK ramps up flour supply to LoC areas amid tensions
+2025-05-04 11:55:19,063 - DawnScraper - INFO - Saved article: AJK ramps up flour supply to LoC areas amid tensions
+2025-05-04 11:55:20,373 - DawnScraper - INFO - Saving article: Pro-Pakistan demo outside Indian High Commission in London
+2025-05-04 11:55:20,374 - DawnScraper - INFO - Saved article: Pro-Pakistan demo outside Indian High Commission in London
+2025-05-04 11:55:21,747 - DawnScraper - INFO - Saving article: Karachi water crisis persists as KWSC struggles to repair damaged pipeline
+2025-05-04 11:55:21,747 - DawnScraper - INFO - Saved article: Karachi water crisis persists as KWSC struggles to repair damaged pipeline
+2025-05-04 11:55:21,747 - DawnScraper - INFO - Successfully scraped 5 articles
+
+2025-05-04 11:55:21,774 - DawnNewsReader - INFO - Starting TTS with voice: Matthew
+2025-05-04 11:55:32,815 - DawnNewsReader - WARNING - TTS warnings: 2025-05-04 11:55:21,988 - AmazonPollyTTS - INFO - AWS credentials loaded successfully
+2025-05-04 11:55:22,061 - AmazonPollyTTS - INFO - Amazon Polly client initialized successfully
+2025-05-04 11:55:22,062 - AmazonPollyTTS - INFO - Found article file: scraped_news/6_Palestinians_killed_as_Israel_continues_bombarding_Gaza_202505041155.json
+2025-05-04 11:55:22,062 - AmazonPollyTTS - INFO - Found article file: scraped_news/Gunmen_intercept_prison_van_in_Kalat__kidnap_five_policemen_202505041155.json
+2025-05-04 11:55:22,063 - AmazonPollyTTS - INFO - Found article file: scraped_news/AJK_ramps_up_flour_supply_to_LoC_areas_amid_tensions_202505041155.json
+2025-05-04 11:55:22,064 - AmazonPollyTTS - INFO - Found article file: scraped_news/Pro_Pakistan_demo_outside_Indian_High_Commission_in_London_202505041155.json
+2025-05-04 11:55:22,064 - AmazonPollyTTS - INFO - Found article file: scraped_news/Karachi_water_crisis_persists_as_KWSC_struggles_to_repair_damaged_pipeline_202505041155.json
+2025-05-04 11:55:22,064 - AmazonPollyTTS - INFO - Found 5 articles to process
+2025-05-04 11:55:22,065 - AmazonPollyTTS - INFO - Using voice: Matthew
+2025-05-04 11:55:22,065 - AmazonPollyTTS - INFO - Processing article: 6 Palestinians killed as Israel continues bombarding Gaza
+2025-05-04 11:55:22,065 - AmazonPollyTTS - INFO - Created script for article: 6 Palestinians killed as Israel continues bombarding Gaza - Script length: 715 chars
+2025-05-04 11:55:23,091 - AmazonPollyTTS - INFO - Successfully generated audio with Amazon Polly
+2025-05-04 11:55:25,104 - AmazonPollyTTS - INFO - Generated audio for: 6 Palestinians killed as Israel continues bombarding Gaza - Saved to: news_audio/6_Palestinians_killed_as_Israel_continues_bombarding_Gaza_202505041155.mp3
+2025-05-04 11:55:25,105 - AmazonPollyTTS - INFO - Processing article: Gunmen intercept prison van in Kalat, kidnap five policemen
+2025-05-04 11:55:25,105 - AmazonPollyTTS - INFO - Created script for article: Gunmen intercept prison van in Kalat, kidnap five policemen - Script length: 1094 chars
+2025-05-04 11:55:25,344 - AmazonPollyTTS - INFO - Successfully generated audio with Amazon Polly
+2025-05-04 11:55:26,758 - AmazonPollyTTS - INFO - Generated audio for: Gunmen intercept prison van in Kalat, kidnap five policemen - Saved to: news_audio/Gunmen_intercept_prison_van_in_Kalat__kidnap_five_policemen_202505041155.mp3
+2025-05-04 11:55:26,759 - AmazonPollyTTS - INFO - Processing article: AJK ramps up flour supply to LoC areas amid tensions
+2025-05-04 11:55:26,759 - AmazonPollyTTS - INFO - Created script for article: AJK ramps up flour supply to LoC areas amid tensions - Script length: 1514 chars
+2025-05-04 11:55:27,082 - AmazonPollyTTS - INFO - Successfully generated audio with Amazon Polly
+2025-05-04 11:55:29,097 - AmazonPollyTTS - INFO - Generated audio for: AJK ramps up flour supply to LoC areas amid tensions - Saved to: news_audio/AJK_ramps_up_flour_supply_to_LoC_areas_amid_tensions_202505041155.mp3
+2025-05-04 11:55:29,098 - AmazonPollyTTS - INFO - Processing article: Pro-Pakistan demo outside Indian High Commission in London
+2025-05-04 11:55:29,098 - AmazonPollyTTS - INFO - Created script for article: Pro-Pakistan demo outside Indian High Commission in London - Script length: 1146 chars
+2025-05-04 11:55:29,327 - AmazonPollyTTS - INFO - Successfully generated audio with Amazon Polly
+2025-05-04 11:55:31,154 - AmazonPollyTTS - INFO - Generated audio for: Pro-Pakistan demo outside Indian High Commission in London - Saved to: news_audio/Pro_Pakistan_demo_outside_Indian_High_Commission_in_London_202505041155.mp3
+2025-05-04 11:55:31,155 - AmazonPollyTTS - INFO - Processing article: Karachi water crisis persists as KWSC struggles to repair damaged pipeline
+2025-05-04 11:55:31,155 - AmazonPollyTTS - INFO - Created script for article: Karachi water crisis persists as KWSC struggles to repair damaged pipeline - Script length: 1116 chars
+2025-05-04 11:55:31,380 - AmazonPollyTTS - INFO - Successfully generated audio with Amazon Polly
+2025-05-04 11:55:32,762 - AmazonPollyTTS - INFO - Generated audio for: Karachi water crisis persists as KWSC struggles to repair damaged pipeline - Saved to: news_audio/Karachi_water_crisis_persists_as_KWSC_struggles_to_repair_damaged_pipeline_202505041155.mp3
+2025-05-04 11:55:32,763 - AmazonPollyTTS - INFO - Processed 5 articles with voice Matthew - Summary saved to news_audio/audio_summary_202505041155.json
+
+2025-05-04 11:55:32,815 - DawnNewsReader - INFO - Starting video generation...
+2025-05-04 11:55:32,816 - DIDVideoGenerator - INFO - D-ID Video Generator initialized
+2025-05-04 11:55:32,816 - DIDVideoGenerator - INFO - Video already exists: news_videos/6_Palestinians_killed_as_Israel_continues_bombarding_Gaza_202505041155.mp4
+2025-05-04 11:55:32,816 - DIDVideoGenerator - INFO - Video already exists: news_videos/Gunmen_intercept_prison_van_in_Kalat__kidnap_five_policemen_202505041155.mp4
+2025-05-04 11:55:32,817 - DIDVideoGenerator - INFO - Video already exists: news_videos/AJK_ramps_up_flour_supply_to_LoC_areas_amid_tensions_202505041155.mp4
+2025-05-04 11:55:32,817 - DIDVideoGenerator - INFO - Creating video for news article: Pro-Pakistan demo outside Indian High Commission in London
+2025-05-04 11:55:32,817 - DIDVideoGenerator - INFO - Using audio file: news_audio/Pro_Pakistan_demo_outside_Indian_High_Commission_in_London_202505041155.mp3
+2025-05-04 11:55:32,817 - DIDVideoGenerator - INFO - Using script text from: news_audio/Pro_Pakistan_demo_outside_Indian_High_Commission_in_London_202505041155_script.txt
+2025-05-04 11:55:32,817 - DIDVideoGenerator - INFO - Sending request to D-ID API
+2025-05-04 11:55:32,817 - DIDVideoGenerator - INFO - Headers: {'Authorization': 'Basic WVhOdFlXbHRjbUZ1WTJoaGRXUm9jbmxBWjIxaGFXd3VZMjl0OnlfU1M5WW9mWVVkbGs1MHV4NnlnVg==', 'Content-Type': 'application/json', 'accept': 'application/json'}
+2025-05-04 11:55:32,817 - DIDVideoGenerator - INFO - Payload snippet: {"script": {"type": "text", "input": "Welcome to Dawn News. Pro-Pakistan demo outside Indian High Commission in London. Sadly, New Delhi remains committed to its dubious goal of isolating Pakistan in the shadow of the Pahalgam episode. LONDON: A large pro-Pakistan demonstration was held on Saturday outside the Indian High Commission in Aldwych, London, under the aegis of Pakistan Muslim League-N\u2019s UK chapter.  The protest came in the wake of the deadly April 22 attack in Pahalgam, Occupied ...
+2025-05-04 11:55:33,804 - DIDVideoGenerator - INFO - Response status code: 402
+2025-05-04 11:55:33,805 - DIDVideoGenerator - INFO - Response headers: {'Date': 'Sun, 04 May 2025 06:55:33 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '70', 'Connection': 'keep-alive', 'x-amzn-RequestId': 'c72ea155-db66-4eb4-b590-9c29d9395ccc', 'x-amzn-Remapped-content-length': '70', 'x-amz-apigw-id': 'KB9X-H4DPHcEp1g=', 'vary': 'Origin', 'etag': 'W/"46-9EJGiI9zMBRUfhDHI06yPQfkP7Q"', 'x-powered-by': 'Express', 'X-Amzn-Trace-Id': 'Root=1-68170f65-7e0de01d1a569a226de53667'}
+2025-05-04 11:55:33,805 - DIDVideoGenerator - INFO - Response text: {"kind":"InsufficientCreditsError","description":"not enough credits"}
+2025-05-04 11:55:33,805 - DIDVideoGenerator - WARNING - Your D-ID account has insufficient credits. Please add credits to your account or use a different video generation service.
+2025-05-04 11:55:33,807 - DIDVideoGenerator - INFO - Creating video for news article: Karachi water crisis persists as KWSC struggles to repair damaged pipeline
+2025-05-04 11:55:33,807 - DIDVideoGenerator - INFO - Using audio file: news_audio/Karachi_water_crisis_persists_as_KWSC_struggles_to_repair_damaged_pipeline_202505041155.mp3
+2025-05-04 11:55:33,807 - DIDVideoGenerator - INFO - Using script text from: news_audio/Karachi_water_crisis_persists_as_KWSC_struggles_to_repair_damaged_pipeline_202505041155_script.txt
+2025-05-04 11:55:33,807 - DIDVideoGenerator - INFO - Sending request to D-ID API
+2025-05-04 11:55:33,807 - DIDVideoGenerator - INFO - Headers: {'Authorization': 'Basic WVhOdFlXbHRjbUZ1WTJoaGRXUm9jbmxBWjIxaGFXd3VZMjl0OnlfU1M5WW9mWVVkbGs1MHV4NnlnVg==', 'Content-Type': 'application/json', 'accept': 'application/json'}
+2025-05-04 11:55:33,807 - DIDVideoGenerator - INFO - Payload snippet: {"script": {"type": "text", "input": "Welcome to Dawn News. Karachi water crisis persists as KWSC struggles to repair damaged pipeline. Sadly, New Delhi remains committed to its dubious goal of isolating Pakistan in the shadow of the Pahalgam episode. KARACHI: The ongoing water crisis caused by the rupture of an 84-inch main water supply line in the University of Karachi is likely to persist as the Karachi Water and Sewerage Corporation is still struggling to complete the repair work on Saturday...
+2025-05-04 11:55:34,803 - DIDVideoGenerator - INFO - Response status code: 402
+2025-05-04 11:55:34,803 - DIDVideoGenerator - INFO - Response headers: {'Date': 'Sun, 04 May 2025 06:55:34 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '70', 'Connection': 'keep-alive', 'x-amzn-RequestId': 'b61baa3d-afd3-4d29-b12d-3aa6f09226fc', 'x-amzn-Remapped-content-length': '70', 'x-amz-apigw-id': 'KB9YIHTQPHcEH9g=', 'vary': 'Origin', 'etag': 'W/"46-9EJGiI9zMBRUfhDHI06yPQfkP7Q"', 'x-powered-by': 'Express', 'X-Amzn-Trace-Id': 'Root=1-68170f66-50cd9f1e71e3019c18dfffff'}
+2025-05-04 11:55:34,803 - DIDVideoGenerator - INFO - Response text: {"kind":"InsufficientCreditsError","description":"not enough credits"}
+2025-05-04 11:55:34,803 - DIDVideoGenerator - WARNING - Your D-ID account has insufficient credits. Please add credits to your account or use a different video generation service.
+2025-05-04 11:55:34,806 - DIDVideoGenerator - INFO - Processed 3 videos for summary news_audio/audio_summary_202505041155.json
+2025-05-04 11:55:34,806 - DawnNewsReader - INFO - News refresh completed successfully
+2025-05-04 11:55:34,807 - werkzeug - INFO - 127.0.0.1 - - [04/May/2025 11:55:34] "GET /refresh-news?voice=Matthew HTTP/1.1" 200 -
+2025-05-04 11:55:34,834 - DawnNewsReader - INFO - Using latest summary file: audio_summary_202505041155.json
+2025-05-04 11:55:34,838 - DawnNewsReader - INFO - Retrieved 5 articles
+2025-05-04 11:55:34,838 - werkzeug - INFO - 127.0.0.1 - - [04/May/2025 11:55:34] "GET /api/news HTTP/1.1" 200 -

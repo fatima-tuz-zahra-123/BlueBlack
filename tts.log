@@ -3846,3 +3846,123 @@
 2025-05-04 02:13:14,543 - AmazonPollyTTS - INFO - Successfully generated audio with Amazon Polly
 2025-05-04 02:13:15,813 - AmazonPollyTTS - INFO - Generated audio for: Pakistan envoy to US calls on world to resolve Kashmir dispute, terms it ‘core issue’ of enmity with India - Saved to: news_audio/Pakistan_envoy_to_US_calls_on_world_to_resolve_Kashmir_dispute__terms_it__core_issue__of_enmity_with_India_202505040213.mp3
 2025-05-04 02:13:15,814 - AmazonPollyTTS - INFO - Processed 5 articles with voice Amy - Summary saved to news_audio/audio_summary_202505040213.json
+2025-05-04 11:54:57,529 - AmazonPollyTTS - INFO - AWS credentials loaded successfully
+2025-05-04 11:54:57,581 - AmazonPollyTTS - INFO - Amazon Polly client initialized successfully
+2025-05-04 11:54:57,583 - AmazonPollyTTS - INFO - Found article file: scraped_news/6_Palestinians_killed_as_Israel_continues_bombarding_Gaza_202505041154.json
+2025-05-04 11:54:57,583 - AmazonPollyTTS - INFO - Found article file: scraped_news/Gunmen_intercept_prison_van_in_Kalat__kidnap_five_policemen_202505041154.json
+2025-05-04 11:54:57,584 - AmazonPollyTTS - INFO - Found article file: scraped_news/AJK_ramps_up_flour_supply_to_LoC_areas_amid_tensions_202505041154.json
+2025-05-04 11:54:57,585 - AmazonPollyTTS - INFO - Found article file: scraped_news/Pro_Pakistan_demo_outside_Indian_High_Commission_in_London_202505041154.json
+2025-05-04 11:54:57,585 - AmazonPollyTTS - INFO - Found article file: scraped_news/Karachi_water_crisis_persists_as_KWSC_struggles_to_repair_damaged_pipeline_202505041154.json
+2025-05-04 11:54:57,585 - AmazonPollyTTS - INFO - Found 5 articles to process
+2025-05-04 11:54:57,585 - AmazonPollyTTS - INFO - Using voice: Brian
+2025-05-04 11:54:57,585 - AmazonPollyTTS - INFO - Processing article: 6 Palestinians killed as Israel continues bombarding Gaza
+2025-05-04 11:54:57,585 - AmazonPollyTTS - INFO - Created script for article: 6 Palestinians killed as Israel continues bombarding Gaza - Script length: 715 chars
+2025-05-04 11:54:58,422 - AmazonPollyTTS - INFO - AWS credentials loaded successfully
+2025-05-04 11:54:58,467 - AmazonPollyTTS - INFO - Amazon Polly client initialized successfully
+2025-05-04 11:54:58,467 - AmazonPollyTTS - INFO - Found article file: scraped_news/6_Palestinians_killed_as_Israel_continues_bombarding_Gaza_202505041154.json
+2025-05-04 11:54:58,468 - AmazonPollyTTS - INFO - Found article file: scraped_news/Gunmen_intercept_prison_van_in_Kalat__kidnap_five_policemen_202505041154.json
+2025-05-04 11:54:58,469 - AmazonPollyTTS - INFO - Found article file: scraped_news/AJK_ramps_up_flour_supply_to_LoC_areas_amid_tensions_202505041154.json
+2025-05-04 11:54:58,470 - AmazonPollyTTS - INFO - Found article file: scraped_news/Pro_Pakistan_demo_outside_Indian_High_Commission_in_London_202505041154.json
+2025-05-04 11:54:58,470 - AmazonPollyTTS - INFO - Found article file: scraped_news/Karachi_water_crisis_persists_as_KWSC_struggles_to_repair_damaged_pipeline_202505041154.json
+2025-05-04 11:54:58,470 - AmazonPollyTTS - INFO - Found 5 articles to process
+2025-05-04 11:54:58,470 - AmazonPollyTTS - INFO - Using voice: Brian
+2025-05-04 11:54:58,470 - AmazonPollyTTS - INFO - Processing article: 6 Palestinians killed as Israel continues bombarding Gaza
+2025-05-04 11:54:58,470 - AmazonPollyTTS - INFO - Created script for article: 6 Palestinians killed as Israel continues bombarding Gaza - Script length: 715 chars
+2025-05-04 11:54:58,778 - AmazonPollyTTS - INFO - Successfully generated audio with Amazon Polly
+2025-05-04 11:54:59,419 - AmazonPollyTTS - INFO - Successfully generated audio with Amazon Polly
+2025-05-04 11:54:59,594 - AmazonPollyTTS - INFO - Generated audio for: 6 Palestinians killed as Israel continues bombarding Gaza - Saved to: news_audio/6_Palestinians_killed_as_Israel_continues_bombarding_Gaza_202505041154.mp3
+2025-05-04 11:54:59,596 - AmazonPollyTTS - INFO - Processing article: Gunmen intercept prison van in Kalat, kidnap five policemen
+2025-05-04 11:54:59,596 - AmazonPollyTTS - INFO - Created script for article: Gunmen intercept prison van in Kalat, kidnap five policemen - Script length: 1094 chars
+2025-05-04 11:54:59,839 - AmazonPollyTTS - INFO - Successfully generated audio with Amazon Polly
+2025-05-04 11:55:00,190 - AmazonPollyTTS - INFO - Generated audio for: 6 Palestinians killed as Israel continues bombarding Gaza - Saved to: news_audio/6_Palestinians_killed_as_Israel_continues_bombarding_Gaza_202505041155.mp3
+2025-05-04 11:55:00,191 - AmazonPollyTTS - INFO - Processing article: Gunmen intercept prison van in Kalat, kidnap five policemen
+2025-05-04 11:55:00,191 - AmazonPollyTTS - INFO - Created script for article: Gunmen intercept prison van in Kalat, kidnap five policemen - Script length: 1094 chars
+2025-05-04 11:55:00,422 - AmazonPollyTTS - INFO - Successfully generated audio with Amazon Polly
+2025-05-04 11:55:00,932 - AmazonPollyTTS - INFO - Generated audio for: Gunmen intercept prison van in Kalat, kidnap five policemen - Saved to: news_audio/Gunmen_intercept_prison_van_in_Kalat__kidnap_five_policemen_202505041155.mp3
+2025-05-04 11:55:00,933 - AmazonPollyTTS - INFO - Processing article: AJK ramps up flour supply to LoC areas amid tensions
+2025-05-04 11:55:00,933 - AmazonPollyTTS - INFO - Created script for article: AJK ramps up flour supply to LoC areas amid tensions - Script length: 1514 chars
+2025-05-04 11:55:01,182 - AmazonPollyTTS - INFO - Successfully generated audio with Amazon Polly
+2025-05-04 11:55:01,485 - AmazonPollyTTS - INFO - Generated audio for: Gunmen intercept prison van in Kalat, kidnap five policemen - Saved to: news_audio/Gunmen_intercept_prison_van_in_Kalat__kidnap_five_policemen_202505041155.mp3
+2025-05-04 11:55:01,486 - AmazonPollyTTS - INFO - Processing article: AJK ramps up flour supply to LoC areas amid tensions
+2025-05-04 11:55:01,486 - AmazonPollyTTS - INFO - Created script for article: AJK ramps up flour supply to LoC areas amid tensions - Script length: 1514 chars
+2025-05-04 11:55:01,715 - AmazonPollyTTS - INFO - Successfully generated audio with Amazon Polly
+2025-05-04 11:55:02,428 - AmazonPollyTTS - INFO - AWS credentials loaded successfully
+2025-05-04 11:55:02,475 - AmazonPollyTTS - INFO - Amazon Polly client initialized successfully
+2025-05-04 11:55:02,476 - AmazonPollyTTS - INFO - Found article file: scraped_news/6_Palestinians_killed_as_Israel_continues_bombarding_Gaza_202505041154.json
+2025-05-04 11:55:02,476 - AmazonPollyTTS - INFO - Found article file: scraped_news/Gunmen_intercept_prison_van_in_Kalat__kidnap_five_policemen_202505041154.json
+2025-05-04 11:55:02,477 - AmazonPollyTTS - INFO - Found article file: scraped_news/AJK_ramps_up_flour_supply_to_LoC_areas_amid_tensions_202505041155.json
+2025-05-04 11:55:02,478 - AmazonPollyTTS - INFO - Found article file: scraped_news/Pro_Pakistan_demo_outside_Indian_High_Commission_in_London_202505041155.json
+2025-05-04 11:55:02,479 - AmazonPollyTTS - INFO - Found article file: scraped_news/Karachi_water_crisis_persists_as_KWSC_struggles_to_repair_damaged_pipeline_202505041155.json
+2025-05-04 11:55:02,479 - AmazonPollyTTS - INFO - Found 5 articles to process
+2025-05-04 11:55:02,479 - AmazonPollyTTS - INFO - Using voice: Matthew
+2025-05-04 11:55:02,479 - AmazonPollyTTS - INFO - Processing article: 6 Palestinians killed as Israel continues bombarding Gaza
+2025-05-04 11:55:02,479 - AmazonPollyTTS - INFO - Created script for article: 6 Palestinians killed as Israel continues bombarding Gaza - Script length: 715 chars
+2025-05-04 11:55:02,545 - AmazonPollyTTS - INFO - Generated audio for: AJK ramps up flour supply to LoC areas amid tensions - Saved to: news_audio/AJK_ramps_up_flour_supply_to_LoC_areas_amid_tensions_202505041155.mp3
+2025-05-04 11:55:02,545 - AmazonPollyTTS - INFO - Processing article: Pro-Pakistan demo outside Indian High Commission in London
+2025-05-04 11:55:02,545 - AmazonPollyTTS - INFO - Created script for article: Pro-Pakistan demo outside Indian High Commission in London - Script length: 1146 chars
+2025-05-04 11:55:02,784 - AmazonPollyTTS - INFO - Successfully generated audio with Amazon Polly
+2025-05-04 11:55:03,076 - AmazonPollyTTS - INFO - Generated audio for: AJK ramps up flour supply to LoC areas amid tensions - Saved to: news_audio/AJK_ramps_up_flour_supply_to_LoC_areas_amid_tensions_202505041155.mp3
+2025-05-04 11:55:03,077 - AmazonPollyTTS - INFO - Processing article: Pro-Pakistan demo outside Indian High Commission in London
+2025-05-04 11:55:03,077 - AmazonPollyTTS - INFO - Created script for article: Pro-Pakistan demo outside Indian High Commission in London - Script length: 1146 chars
+2025-05-04 11:55:03,309 - AmazonPollyTTS - INFO - Successfully generated audio with Amazon Polly
+2025-05-04 11:55:03,488 - AmazonPollyTTS - INFO - Successfully generated audio with Amazon Polly
+2025-05-04 11:55:03,888 - AmazonPollyTTS - INFO - Generated audio for: Pro-Pakistan demo outside Indian High Commission in London - Saved to: news_audio/Pro_Pakistan_demo_outside_Indian_High_Commission_in_London_202505041155.mp3
+2025-05-04 11:55:03,890 - AmazonPollyTTS - INFO - Processing article: Karachi water crisis persists as KWSC struggles to repair damaged pipeline
+2025-05-04 11:55:03,890 - AmazonPollyTTS - INFO - Created script for article: Karachi water crisis persists as KWSC struggles to repair damaged pipeline - Script length: 1116 chars
+2025-05-04 11:55:04,128 - AmazonPollyTTS - INFO - Successfully generated audio with Amazon Polly
+2025-05-04 11:55:04,242 - AmazonPollyTTS - INFO - Generated audio for: 6 Palestinians killed as Israel continues bombarding Gaza - Saved to: news_audio/6_Palestinians_killed_as_Israel_continues_bombarding_Gaza_202505041155.mp3
+2025-05-04 11:55:04,243 - AmazonPollyTTS - INFO - Processing article: Gunmen intercept prison van in Kalat, kidnap five policemen
+2025-05-04 11:55:04,243 - AmazonPollyTTS - INFO - Created script for article: Gunmen intercept prison van in Kalat, kidnap five policemen - Script length: 1094 chars
+2025-05-04 11:55:04,402 - AmazonPollyTTS - INFO - Generated audio for: Pro-Pakistan demo outside Indian High Commission in London - Saved to: news_audio/Pro_Pakistan_demo_outside_Indian_High_Commission_in_London_202505041155.mp3
+2025-05-04 11:55:04,403 - AmazonPollyTTS - INFO - Processing article: Karachi water crisis persists as KWSC struggles to repair damaged pipeline
+2025-05-04 11:55:04,403 - AmazonPollyTTS - INFO - Created script for article: Karachi water crisis persists as KWSC struggles to repair damaged pipeline - Script length: 1116 chars
+2025-05-04 11:55:04,498 - AmazonPollyTTS - INFO - Successfully generated audio with Amazon Polly
+2025-05-04 11:55:04,633 - AmazonPollyTTS - INFO - Successfully generated audio with Amazon Polly
+2025-05-04 11:55:05,049 - AmazonPollyTTS - INFO - Generated audio for: Gunmen intercept prison van in Kalat, kidnap five policemen - Saved to: news_audio/Gunmen_intercept_prison_van_in_Kalat__kidnap_five_policemen_202505041155.mp3
+2025-05-04 11:55:05,050 - AmazonPollyTTS - INFO - Processing article: AJK ramps up flour supply to LoC areas amid tensions
+2025-05-04 11:55:05,050 - AmazonPollyTTS - INFO - Created script for article: AJK ramps up flour supply to LoC areas amid tensions - Script length: 1514 chars
+2025-05-04 11:55:05,261 - AmazonPollyTTS - INFO - Generated audio for: Karachi water crisis persists as KWSC struggles to repair damaged pipeline - Saved to: news_audio/Karachi_water_crisis_persists_as_KWSC_struggles_to_repair_damaged_pipeline_202505041155.mp3
+2025-05-04 11:55:05,270 - AmazonPollyTTS - INFO - Processed 5 articles with voice Brian - Summary saved to news_audio/audio_summary_202505041155.json
+2025-05-04 11:55:05,289 - AmazonPollyTTS - INFO - Successfully generated audio with Amazon Polly
+2025-05-04 11:55:05,786 - AmazonPollyTTS - INFO - Generated audio for: Karachi water crisis persists as KWSC struggles to repair damaged pipeline - Saved to: news_audio/Karachi_water_crisis_persists_as_KWSC_struggles_to_repair_damaged_pipeline_202505041155.mp3
+2025-05-04 11:55:05,788 - AmazonPollyTTS - INFO - Processed 5 articles with voice Brian - Summary saved to news_audio/audio_summary_202505041155.json
+2025-05-04 11:55:06,019 - AmazonPollyTTS - INFO - Generated audio for: AJK ramps up flour supply to LoC areas amid tensions - Saved to: news_audio/AJK_ramps_up_flour_supply_to_LoC_areas_amid_tensions_202505041155.mp3
+2025-05-04 11:55:06,019 - AmazonPollyTTS - INFO - Processing article: Pro-Pakistan demo outside Indian High Commission in London
+2025-05-04 11:55:06,019 - AmazonPollyTTS - INFO - Created script for article: Pro-Pakistan demo outside Indian High Commission in London - Script length: 1146 chars
+2025-05-04 11:55:06,269 - AmazonPollyTTS - INFO - Successfully generated audio with Amazon Polly
+2025-05-04 11:55:06,893 - AmazonPollyTTS - INFO - Generated audio for: Pro-Pakistan demo outside Indian High Commission in London - Saved to: news_audio/Pro_Pakistan_demo_outside_Indian_High_Commission_in_London_202505041155.mp3
+2025-05-04 11:55:06,894 - AmazonPollyTTS - INFO - Processing article: Karachi water crisis persists as KWSC struggles to repair damaged pipeline
+2025-05-04 11:55:06,894 - AmazonPollyTTS - INFO - Created script for article: Karachi water crisis persists as KWSC struggles to repair damaged pipeline - Script length: 1116 chars
+2025-05-04 11:55:07,138 - AmazonPollyTTS - INFO - Successfully generated audio with Amazon Polly
+2025-05-04 11:55:07,715 - AmazonPollyTTS - INFO - Generated audio for: Karachi water crisis persists as KWSC struggles to repair damaged pipeline - Saved to: news_audio/Karachi_water_crisis_persists_as_KWSC_struggles_to_repair_damaged_pipeline_202505041155.mp3
+2025-05-04 11:55:07,717 - AmazonPollyTTS - INFO - Processed 5 articles with voice Matthew - Summary saved to news_audio/audio_summary_202505041155.json
+2025-05-04 11:55:21,988 - AmazonPollyTTS - INFO - AWS credentials loaded successfully
+2025-05-04 11:55:22,061 - AmazonPollyTTS - INFO - Amazon Polly client initialized successfully
+2025-05-04 11:55:22,062 - AmazonPollyTTS - INFO - Found article file: scraped_news/6_Palestinians_killed_as_Israel_continues_bombarding_Gaza_202505041155.json
+2025-05-04 11:55:22,062 - AmazonPollyTTS - INFO - Found article file: scraped_news/Gunmen_intercept_prison_van_in_Kalat__kidnap_five_policemen_202505041155.json
+2025-05-04 11:55:22,063 - AmazonPollyTTS - INFO - Found article file: scraped_news/AJK_ramps_up_flour_supply_to_LoC_areas_amid_tensions_202505041155.json
+2025-05-04 11:55:22,064 - AmazonPollyTTS - INFO - Found article file: scraped_news/Pro_Pakistan_demo_outside_Indian_High_Commission_in_London_202505041155.json
+2025-05-04 11:55:22,064 - AmazonPollyTTS - INFO - Found article file: scraped_news/Karachi_water_crisis_persists_as_KWSC_struggles_to_repair_damaged_pipeline_202505041155.json
+2025-05-04 11:55:22,064 - AmazonPollyTTS - INFO - Found 5 articles to process
+2025-05-04 11:55:22,065 - AmazonPollyTTS - INFO - Using voice: Matthew
+2025-05-04 11:55:22,065 - AmazonPollyTTS - INFO - Processing article: 6 Palestinians killed as Israel continues bombarding Gaza
+2025-05-04 11:55:22,065 - AmazonPollyTTS - INFO - Created script for article: 6 Palestinians killed as Israel continues bombarding Gaza - Script length: 715 chars
+2025-05-04 11:55:23,091 - AmazonPollyTTS - INFO - Successfully generated audio with Amazon Polly
+2025-05-04 11:55:25,104 - AmazonPollyTTS - INFO - Generated audio for: 6 Palestinians killed as Israel continues bombarding Gaza - Saved to: news_audio/6_Palestinians_killed_as_Israel_continues_bombarding_Gaza_202505041155.mp3
+2025-05-04 11:55:25,105 - AmazonPollyTTS - INFO - Processing article: Gunmen intercept prison van in Kalat, kidnap five policemen
+2025-05-04 11:55:25,105 - AmazonPollyTTS - INFO - Created script for article: Gunmen intercept prison van in Kalat, kidnap five policemen - Script length: 1094 chars
+2025-05-04 11:55:25,344 - AmazonPollyTTS - INFO - Successfully generated audio with Amazon Polly
+2025-05-04 11:55:26,758 - AmazonPollyTTS - INFO - Generated audio for: Gunmen intercept prison van in Kalat, kidnap five policemen - Saved to: news_audio/Gunmen_intercept_prison_van_in_Kalat__kidnap_five_policemen_202505041155.mp3
+2025-05-04 11:55:26,759 - AmazonPollyTTS - INFO - Processing article: AJK ramps up flour supply to LoC areas amid tensions
+2025-05-04 11:55:26,759 - AmazonPollyTTS - INFO - Created script for article: AJK ramps up flour supply to LoC areas amid tensions - Script length: 1514 chars
+2025-05-04 11:55:27,082 - AmazonPollyTTS - INFO - Successfully generated audio with Amazon Polly
+2025-05-04 11:55:29,097 - AmazonPollyTTS - INFO - Generated audio for: AJK ramps up flour supply to LoC areas amid tensions - Saved to: news_audio/AJK_ramps_up_flour_supply_to_LoC_areas_amid_tensions_202505041155.mp3
+2025-05-04 11:55:29,098 - AmazonPollyTTS - INFO - Processing article: Pro-Pakistan demo outside Indian High Commission in London
+2025-05-04 11:55:29,098 - AmazonPollyTTS - INFO - Created script for article: Pro-Pakistan demo outside Indian High Commission in London - Script length: 1146 chars
+2025-05-04 11:55:29,327 - AmazonPollyTTS - INFO - Successfully generated audio with Amazon Polly
+2025-05-04 11:55:31,154 - AmazonPollyTTS - INFO - Generated audio for: Pro-Pakistan demo outside Indian High Commission in London - Saved to: news_audio/Pro_Pakistan_demo_outside_Indian_High_Commission_in_London_202505041155.mp3
+2025-05-04 11:55:31,155 - AmazonPollyTTS - INFO - Processing article: Karachi water crisis persists as KWSC struggles to repair damaged pipeline
+2025-05-04 11:55:31,155 - AmazonPollyTTS - INFO - Created script for article: Karachi water crisis persists as KWSC struggles to repair damaged pipeline - Script length: 1116 chars
+2025-05-04 11:55:31,380 - AmazonPollyTTS - INFO - Successfully generated audio with Amazon Polly
+2025-05-04 11:55:32,762 - AmazonPollyTTS - INFO - Generated audio for: Karachi water crisis persists as KWSC struggles to repair damaged pipeline - Saved to: news_audio/Karachi_water_crisis_persists_as_KWSC_struggles_to_repair_damaged_pipeline_202505041155.mp3
+2025-05-04 11:55:32,763 - AmazonPollyTTS - INFO - Processed 5 articles with voice Matthew - Summary saved to news_audio/audio_summary_202505041155.json

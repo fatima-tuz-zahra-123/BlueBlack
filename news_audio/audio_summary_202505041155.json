@@ -1,0 +1,30 @@
+{
+  "timestamp": "2025-05-04T11:55:32.763652",
+  "count": 5,
+  "voice": "Matthew",
+  "articles": [
+    {
+      "title": "6 Palestinians killed as Israel continues bombarding Gaza",
+      "audio_path": "news_audio/6_Palestinians_killed_as_Israel_continues_bombarding_Gaza_202505041155.mp3",
+      "video_path": "news_videos/6_Palestinians_killed_as_Israel_continues_bombarding_Gaza_202505041155.mp4"
+    },
+    {
+      "title": "Gunmen intercept prison van in Kalat, kidnap five policemen",
+      "audio_path": "news_audio/Gunmen_intercept_prison_van_in_Kalat__kidnap_five_policemen_202505041155.mp3",
+      "video_path": "news_videos/Gunmen_intercept_prison_van_in_Kalat__kidnap_five_policemen_202505041155.mp4"
+    },
+    {
+      "title": "AJK ramps up flour supply to LoC areas amid tensions",
+      "audio_path": "news_audio/AJK_ramps_up_flour_supply_to_LoC_areas_amid_tensions_202505041155.mp3",
+      "video_path": "news_videos/AJK_ramps_up_flour_supply_to_LoC_areas_amid_tensions_202505041155.mp4"
+    },
+    {
+      "title": "Pro-Pakistan demo outside Indian High Commission in London",
+      "audio_path": "news_audio/Pro_Pakistan_demo_outside_Indian_High_Commission_in_London_202505041155.mp3"
+    },
+    {
+      "title": "Karachi water crisis persists as KWSC struggles to repair damaged pipeline",
+      "audio_path": "news_audio/Karachi_water_crisis_persists_as_KWSC_struggles_to_repair_damaged_pipeline_202505041155.mp3"
+    }
+  ]
+}
